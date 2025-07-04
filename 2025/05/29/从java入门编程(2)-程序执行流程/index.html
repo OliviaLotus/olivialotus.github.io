@@ -14,12 +14,12 @@
 
   
 
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://olivialotus.github.io';</script>
   
   <title>
     从java入门编程(2)-程序执行流程 |
     
-    Hexo
+    Olivia
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
@@ -38,26 +38,26 @@
     <meta name="description" content="从java入门编程(2)-程序执行流程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从java入门编程(2)-程序执行流程">
-<meta property="og:url" content="http://example.com/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="https://olivialotus.github.io/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Olivia">
 <meta property="og:description" content="从java入门编程(2)-程序执行流程">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/2025-05-29-12-01-20.png">
-<meta property="og:image" content="http://example.com/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/2025-05-29-12-03-03.png">
-<meta property="og:image" content="http://example.com/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/2025-05-29-12-10-16.png">
-<meta property="og:image" content="http://example.com/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/2025-05-29-14-01-35.png">
-<meta property="og:image" content="http://example.com/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/2025-05-29-14-16-13.png">
-<meta property="og:image" content="http://example.com/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/2025-05-29-14-16-33.png">
+<meta property="og:image" content="https://olivialotus.github.io/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/2025-05-29-12-01-20.png">
+<meta property="og:image" content="https://olivialotus.github.io/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/2025-05-29-12-03-03.png">
+<meta property="og:image" content="https://olivialotus.github.io/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/2025-05-29-12-10-16.png">
+<meta property="og:image" content="https://olivialotus.github.io/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/2025-05-29-14-01-35.png">
+<meta property="og:image" content="https://olivialotus.github.io/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/2025-05-29-14-16-13.png">
+<meta property="og:image" content="https://olivialotus.github.io/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/2025-05-29-14-16-33.png">
 <meta property="article:published_time" content="2025-05-29T12:12:52.000Z">
-<meta property="article:modified_time" content="2025-07-04T06:49:47.767Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2025-07-04T08:29:50.481Z">
+<meta property="article:author" content="Olivia Lotus">
 <meta property="article:tag" content="java">
 <meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/2025-05-29-12-01-20.png">
+<meta name="twitter:image" content="https://olivialotus.github.io/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/2025-05-29-12-01-20.png">
   
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Olivia" type="application/atom+xml">
   
   
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -103,7 +103,7 @@
       
         
       
-      <div class="loading-word">少女祈祷中...</div>
+      <div class="loading-word">少女折寿中...</div>
     </div>
   </div>
   </div>
@@ -242,8 +242,8 @@
 </div>
 </div>
           <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="John Doe" class="lazyload">
-  <div class="sidebar-author-name">John Doe</div>
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="Olivia Lotus" class="lazyload">
+  <div class="sidebar-author-name">Olivia Lotus</div>
   <div class="sidebar-description"></div>
 </div>
 <div class="sidebar-state">
@@ -366,7 +366,13 @@ Java Extension Pack：它是一个扩展包集合，通常包括调试工具、�
 <p><img src="2025-05-29-12-01-20.png" alt="" /><br />
 编译过程会检查代码的语法错误、类型错误等，并生成 .class 文件(字节码文件)，这是 Java 程序运行的基础。<br />
 .class文件在vscode默认是生成在项目根目录的bin文件夹下,其他编辑器位置可能不同.在项目的.vscode文件夹下有个<strong>settings.json</strong>文件,在这里为这个java项目做一些单独的配置</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;java.project.sourcePaths&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;src&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;java.project.outputPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;bin&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;java.project.referencedLibraries&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;lib/**/*.jar&quot;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="highlight json"><span class="punctuation">&#123;</span>
+    <span class="attr">&quot;java.project.sourcePaths&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;src&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span>
+    <span class="attr">&quot;java.project.outputPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;bin&quot;</span><span class="punctuation">,</span>
+    <span class="attr">&quot;java.project.referencedLibraries&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span>
+        <span class="string">&quot;lib/**/*.jar&quot;</span>
+    <span class="punctuation">]</span>
+<span class="punctuation">&#125;</span></code></pre>
 <p><img src="2025-05-29-12-03-03.png" alt="" /></p>
 <h3 id="运行-java-程序"><a class="markdownIt-Anchor" href="#运行-java-程序"></a> 运行 Java 程序</h3>
 <p>编译完成后，VSCode 会通过 java.exe 启动 <strong>Java 虚拟机(JVM)</strong>，并加载生成的 <strong>.class 文件</strong>。<br />
@@ -481,7 +487,7 @@ Java Extension Pack：它是一个扩展包集合，通常包括调试工具、�
         2020-2025
       
       <span class="footer-info-sep rotate"></span>
-      John Doe
+      Olivia Lotus
     </div>
     
       <div>
@@ -534,8 +540,8 @@ Java Extension Pack：它是一个扩展包集合，通常包括调试工具、�
 </div>
 </div>
         <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="John Doe" class="lazyload">
-  <div class="sidebar-author-name">John Doe</div>
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="Olivia Lotus" class="lazyload">
+  <div class="sidebar-author-name">Olivia Lotus</div>
   <div class="sidebar-description"></div>
 </div>
 <div class="sidebar-state">
@@ -665,7 +671,7 @@ Java Extension Pack：它是一个扩展包集合，通常包括调试工具、�
 <script src="https://npm.webcache.cn/mouse-firework@0.1.1/dist/index.umd.js" integrity="sha384-8LyaidD9GPxQQgLJO&#x2F;WRw&#x2F;O2h3BoNq&#x2F;ApI&#x2F;ecpvM6RsrCz2qP2ppBXUKihP4V&#x2F;2d" crossorigin="anonymous"></script>
 
   <script>
-    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["var(--red-1)","var(--red-2)","var(--red-3)","var(--red-4)"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["var(--red-0)"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["var(--red-1)","var(--red-2)","var(--red-3)","var(--red-4)"],"number":3,"duration":[1200,1800,200,400],"shapeOptions":{"radius":[16,32,2,4],"alpha":[0.3,0.5]},"moveOptions":{"emitRadius":[30,50],"diffuseRadius":[30,50]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["var(--red-0)"],"number":2,"duration":[1200,1800,200,400],"shapeOptions":{"radius":[6,10],"alpha":[0.2,0.5],"lineWidth":1},"moveOptions":{"emitRadius":[30,50],"diffuseRadius":[30,50]}}]}'))
   </script>
 
 
@@ -684,14 +690,14 @@ Java Extension Pack：它是一个扩展包集合，通常包括调试工具、�
       
       <script data-pjax>
         window.REIMU_POST = {
-          author: "John Doe",
+          author: "Olivia Lotus",
           title: "从java入门编程(2)-程序执行流程",
-          url: "http://example.com/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/",
+          url: "https://olivialotus.github.io/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/",
           excerpt: "",
           description: "从java入门编程(2)-程序执行流程",
           stripContent: " 运行流程 下面的内容有些词听不懂没关系,只要明白是一些jdk文件夹里的程序在起作用即可. 当我们点击右上角的小三角后  VSCode检测Java环境 VSCode 会通过配置的 JDK 环境变量来确认 Java 开发环境是否可用。也就是vscode会优先从系统变量里找javahome(大小写无所谓)变量,但是我们并没有配置,先前只是配置path变量里的可执行文件路径而已,所以我们手动在vscode的设置里配置了javahome的路径. 如果环境变量配置有问题，VSCode 会提示你重新配置 J",
           date: "Thu May 29 2025 12:12:52 GMT+0000",
-          updated: "Fri Jul 04 2025 06:49:47 GMT+0000",
+          updated: "Fri Jul 04 2025 08:29:50 GMT+0000",
           cover: "/images/banner.webp",
         };
       </script>

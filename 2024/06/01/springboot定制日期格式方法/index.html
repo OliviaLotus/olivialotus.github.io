@@ -14,12 +14,12 @@
 
   
 
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://olivialotus.github.io';</script>
   
   <title>
     springboot定制日期格式方法 |
     
-    Hexo
+    Olivia
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
@@ -38,19 +38,19 @@
     <meta name="description" content="springboot定制日期格式方法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="springboot定制日期格式方法">
-<meta property="og:url" content="http://example.com/2024/06/01/springboot%E5%AE%9A%E5%88%B6%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%96%B9%E6%B3%95/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="https://olivialotus.github.io/2024/06/01/springboot%E5%AE%9A%E5%88%B6%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="Olivia">
 <meta property="og:description" content="springboot定制日期格式方法">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-06-01T12:12:52.000Z">
-<meta property="article:modified_time" content="2025-07-04T06:49:47.760Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2025-07-04T08:29:50.473Z">
+<meta property="article:author" content="Olivia Lotus">
 <meta property="article:tag" content="java">
 <meta property="article:tag" content="spring">
 <meta name="twitter:card" content="summary">
   
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Olivia" type="application/atom+xml">
   
   
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -96,7 +96,7 @@
       
         
       
-      <div class="loading-word">少女祈祷中...</div>
+      <div class="loading-word">少女折寿中...</div>
     </div>
   </div>
   </div>
@@ -235,8 +235,8 @@
 </div>
 </div>
           <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="John Doe" class="lazyload">
-  <div class="sidebar-author-name">John Doe</div>
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="Olivia Lotus" class="lazyload">
+  <div class="sidebar-author-name">Olivia Lotus</div>
   <div class="sidebar-description"></div>
 </div>
 <div class="sidebar-state">
@@ -347,12 +347,23 @@
         <h3 id="1-全局配置applicationpropertiesyml"><a class="markdownIt-Anchor" href="#1-全局配置applicationpropertiesyml"></a> <strong>1. 全局配置（application.properties/yml）</strong></h3>
 <p><strong>适用场景</strong>：统一整个应用的日期格式<br />
 <strong>支持的格式</strong>：<code>java.util.Date</code>、<code>java.time.*(如LocalDateTime)</code>（需额外配置）</p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置全局日期格式（针对JSON序列化）</span></span><br><span class="line"><span class="attr">spring.jackson.date-format</span>=<span class="string">yyyy-MM-dd HH:mm:ss</span></span><br><span class="line"><span class="attr">spring.jackson.time-zone</span>=<span class="string">GMT+8  # 设置时区</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"># 针对Java 8日期类型（如LocalDateTime）需关闭时间戳格式</span></span><br><span class="line"><span class="attr">spring.jackson.serialization.write-dates-as-timestamps</span>=<span class="string">false</span></span><br></pre></td></tr></table></figure>
+<pre><code class="highlight properties"><span class="comment"># 设置全局日期格式（针对JSON序列化）</span>
+<span class="attr">spring.jackson.date-format</span>=<span class="string">yyyy-MM-dd HH:mm:ss</span>
+<span class="attr">spring.jackson.time-zone</span>=<span class="string">GMT+8  # 设置时区</span>
+<span class="comment"></span>
+<span class="comment"># 针对Java 8日期类型（如LocalDateTime）需关闭时间戳格式</span>
+<span class="attr">spring.jackson.serialization.write-dates-as-timestamps</span>=<span class="string">false</span></code></pre>
 <hr />
 <h3 id="2-使用jsonformat注解"><a class="markdownIt-Anchor" href="#2-使用jsonformat注解"></a> <strong>2. 使用<code>@JsonFormat</code>注解</strong></h3>
 <p><strong>适用场景</strong>：针对特定字段定制序列化格式<br />
 <strong>支持类型</strong>：<code>Date</code>、<code>Calendar</code>、<code>java.time.*</code></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="meta">@JsonFormat(pattern = &quot;yyyy/MM/dd&quot;, timezone = &quot;Asia/Shanghai&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Date birthDate;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@JsonFormat(pattern = &quot;yyyy-MM-dd HH:mm:ss&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> LocalDateTime createTime;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="highlight java"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;
+    <span class="meta">@JsonFormat(pattern = &quot;yyyy/MM/dd&quot;, timezone = &quot;Asia/Shanghai&quot;)</span>
+    <span class="keyword">private</span> Date birthDate;
+
+    <span class="meta">@JsonFormat(pattern = &quot;yyyy-MM-dd HH:mm:ss&quot;)</span>
+    <span class="keyword">private</span> LocalDateTime createTime;
+&#125;</code></pre>
 <blockquote>
 <p>序列化指将前端传来的json对象转化成java对象</p>
 <p>反序列化则相反</p>
@@ -361,29 +372,153 @@
 <h3 id="3-使用datetimeformat注解"><a class="markdownIt-Anchor" href="#3-使用datetimeformat注解"></a> <strong>3. 使用<code>@DateTimeFormat</code>注解</strong></h3>
 <p><strong>适用场景</strong>：处理表单提交或<code>@RequestParam</code>的参数绑定（<strong>仅反序列化</strong>）<br />
 <strong>支持类型</strong>：<code>Date</code>、<code>Calendar</code>、<code>java.time.*</code></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Event</span> &#123;</span><br><span class="line">    <span class="meta">@DateTimeFormat(pattern = &quot;dd-MM-yyyy&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Date eventDate;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="highlight java"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Event</span> &#123;
+    <span class="meta">@DateTimeFormat(pattern = &quot;dd-MM-yyyy&quot;)</span>
+    <span class="keyword">private</span> Date eventDate;
+&#125;</code></pre>
 <blockquote>
 <p><strong>注意</strong>：此注解不影响JSON序列化（返回给前端的格式），需配合<code>@JsonFormat</code>使用。</p>
 </blockquote>
 <hr />
 <h3 id="4-自定义全局objectmapper"><a class="markdownIt-Anchor" href="#4-自定义全局objectmapper"></a> <strong>4. 自定义全局<code>ObjectMapper</code></strong></h3>
 <p><strong>适用场景</strong>：完全控制Jackson的日期序列化行为</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.databind.ObjectMapper;</span><br><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;</span><br><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> java.time.LocalDateTime;</span><br><span class="line"><span class="keyword">import</span> java.time.format.DateTimeFormatter;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JacksonConfig</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> ObjectMapper <span class="title function_">objectMapper</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">ObjectMapper</span> <span class="variable">mapper</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ObjectMapper</span>();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 配置Java 8日期时间类型序列化</span></span><br><span class="line">        <span class="type">JavaTimeModule</span> <span class="variable">javaTimeModule</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">JavaTimeModule</span>();</span><br><span class="line">        javaTimeModule.addSerializer(</span><br><span class="line">            LocalDateTime.class,</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">LocalDateTimeSerializer</span>(DateTimeFormatter.ofPattern(<span class="string">&quot;yyyy-MM-dd HH:ss&quot;</span>))</span><br><span class="line">        );</span><br><span class="line">        </span><br><span class="line">        mapper.registerModule(javaTimeModule);</span><br><span class="line">        mapper.setDateFormat(DateTimeFormatter.ofPattern(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>));</span><br><span class="line">        mapper.setTimeZone(TimeZone.getTimeZone(<span class="string">&quot;GMT+8&quot;</span>));</span><br><span class="line">        <span class="keyword">return</span> mapper;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="highlight java"><span class="keyword">import</span> com.fasterxml.jackson.databind.ObjectMapper;
+<span class="keyword">import</span> com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+<span class="keyword">import</span> com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+<span class="keyword">import</span> org.springframework.context.annotation.Bean;
+<span class="keyword">import</span> org.springframework.context.annotation.Configuration;
+<span class="keyword">import</span> java.time.LocalDateTime;
+<span class="keyword">import</span> java.time.format.DateTimeFormatter;
+
+<span class="meta">@Configuration</span>
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JacksonConfig</span> &#123;
+
+    <span class="meta">@Bean</span>
+    <span class="keyword">public</span> ObjectMapper <span class="title function_">objectMapper</span><span class="params">()</span> &#123;
+        <span class="type">ObjectMapper</span> <span class="variable">mapper</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ObjectMapper</span>();
+        
+        <span class="comment">// 配置Java 8日期时间类型序列化</span>
+        <span class="type">JavaTimeModule</span> <span class="variable">javaTimeModule</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">JavaTimeModule</span>();
+        javaTimeModule.addSerializer(
+            LocalDateTime.class,
+            <span class="keyword">new</span> <span class="title class_">LocalDateTimeSerializer</span>(DateTimeFormatter.ofPattern(<span class="string">&quot;yyyy-MM-dd HH:ss&quot;</span>))
+        );
+        
+        mapper.registerModule(javaTimeModule);
+        mapper.setDateFormat(DateTimeFormatter.ofPattern(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>));
+        mapper.setTimeZone(TimeZone.getTimeZone(<span class="string">&quot;GMT+8&quot;</span>));
+        <span class="keyword">return</span> mapper;
+    &#125;
+&#125;</code></pre>
 <hr />
 <h3 id="5-实现converter接口"><a class="markdownIt-Anchor" href="#5-实现converter接口"></a> <strong>5. 实现<code>Converter</code>接口</strong></h3>
 <p><strong>适用场景</strong>：处理控制器参数绑定（如<code>@RequestParam</code>、<code>@PathVariable</code>）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.core.convert.converter.Converter;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.text.ParseException;</span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StringToDateConverter</span> <span class="keyword">implements</span> <span class="title class_">Converter</span>&lt;String, Date&gt; &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="type">SimpleDateFormat</span> <span class="variable">format</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy|MM|dd&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Date <span class="title function_">convert</span><span class="params">(String source)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> format.parse(source);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ParseException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IllegalArgumentException</span>(<span class="string">&quot;日期格式无效: &quot;</span> + source);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="highlight java"><span class="keyword">import</span> org.springframework.core.convert.converter.Converter;
+<span class="keyword">import</span> org.springframework.stereotype.Component;
+
+<span class="keyword">import</span> java.text.ParseException;
+<span class="keyword">import</span> java.text.SimpleDateFormat;
+<span class="keyword">import</span> java.util.Date;
+
+<span class="meta">@Component</span>
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StringToDateConverter</span> <span class="keyword">implements</span> <span class="title class_">Converter</span>&lt;String, Date&gt; &#123;
+    <span class="keyword">private</span> <span class="keyword">final</span> <span class="type">SimpleDateFormat</span> <span class="variable">format</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy|MM|dd&quot;</span>);
+
+    <span class="meta">@Override</span>
+    <span class="keyword">public</span> Date <span class="title function_">convert</span><span class="params">(String source)</span> &#123;
+        <span class="keyword">try</span> &#123;
+            <span class="keyword">return</span> format.parse(source);
+        &#125; <span class="keyword">catch</span> (ParseException e) &#123;
+            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IllegalArgumentException</span>(<span class="string">&quot;日期格式无效: &quot;</span> + source);
+        &#125;
+    &#125;
+&#125;</code></pre>
 <hr />
 <h3 id="6-自定义formatter"><a class="markdownIt-Anchor" href="#6-自定义formatter"></a> <strong>6. 自定义<code>Formatter</code></strong></h3>
 <p><strong>适用场景</strong>：同时处理序列化与反序列化（如Thymeleaf页面渲染）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.format.Formatter;</span><br><span class="line"><span class="keyword">import</span> java.text.ParseException;</span><br><span class="line"><span class="keyword">import</span> java.time.LocalDate;</span><br><span class="line"><span class="keyword">import</span> java.time.format.DateTimeFormatter;</span><br><span class="line"><span class="keyword">import</span> java.util.Locale;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LocalDateFormatter</span> <span class="keyword">implements</span> <span class="title class_">Formatter</span>&lt;LocalDate&gt; &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="type">DateTimeFormatter</span> <span class="variable">formatter</span> <span class="operator">=</span> DateTimeFormatter.ofPattern(<span class="string">&quot;yyyy/MM/dd&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> LocalDate <span class="title function_">parse</span><span class="params">(String text, Locale locale)</span> <span class="keyword">throws</span> ParseException &#123;</span><br><span class="line">        <span class="keyword">return</span> LocalDate.parse(text, formatter);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">print</span><span class="params">(LocalDate object, Locale locale)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> object.format(formatter);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="highlight java"><span class="keyword">import</span> org.springframework.format.Formatter;
+<span class="keyword">import</span> java.text.ParseException;
+<span class="keyword">import</span> java.time.LocalDate;
+<span class="keyword">import</span> java.time.format.DateTimeFormatter;
+<span class="keyword">import</span> java.util.Locale;
+
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LocalDateFormatter</span> <span class="keyword">implements</span> <span class="title class_">Formatter</span>&lt;LocalDate&gt; &#123;
+    <span class="keyword">private</span> <span class="keyword">final</span> <span class="type">DateTimeFormatter</span> <span class="variable">formatter</span> <span class="operator">=</span> DateTimeFormatter.ofPattern(<span class="string">&quot;yyyy/MM/dd&quot;</span>);
+
+    <span class="meta">@Override</span>
+    <span class="keyword">public</span> LocalDate <span class="title function_">parse</span><span class="params">(String text, Locale locale)</span> <span class="keyword">throws</span> ParseException &#123;
+        <span class="keyword">return</span> LocalDate.parse(text, formatter);
+    &#125;
+
+    <span class="meta">@Override</span>
+    <span class="keyword">public</span> String <span class="title function_">print</span><span class="params">(LocalDate object, Locale locale)</span> &#123;
+        <span class="keyword">return</span> object.format(formatter);
+    &#125;
+&#125;</code></pre>
 <p>注册Formatter：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.format.FormatterRegistry;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.servlet.config.annotation.WebMvcConfigurer;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WebConfig</span> <span class="keyword">implements</span> <span class="title class_">WebMvcConfigurer</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addFormatters</span><span class="params">(FormatterRegistry registry)</span> &#123;</span><br><span class="line">        registry.addFormatter(<span class="keyword">new</span> <span class="title class_">LocalDateFormatter</span>());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="highlight java"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;
+<span class="keyword">import</span> org.springframework.format.FormatterRegistry;
+<span class="keyword">import</span> org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+<span class="meta">@Configuration</span>
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WebConfig</span> <span class="keyword">implements</span> <span class="title class_">WebMvcConfigurer</span> &#123;
+    <span class="meta">@Override</span>
+    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addFormatters</span><span class="params">(FormatterRegistry registry)</span> &#123;
+        registry.addFormatter(<span class="keyword">new</span> <span class="title class_">LocalDateFormatter</span>());
+    &#125;
+&#125;</code></pre>
 <hr />
 <h3 id="7-objectmapper定制器"><a class="markdownIt-Anchor" href="#7-objectmapper定制器"></a> 7. ObjectMapper定制器</h3>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;</span><br><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.AutoConfiguration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> java.time.LocalDateTime;</span><br><span class="line"><span class="keyword">import</span> java.time.format.DateTimeFormatter;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">import</span> java.util.TimeZone;</span><br><span class="line"></span><br><span class="line"><span class="meta">@AutoConfiguration(before = JacksonAutoConfiguration.class)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JacksonConfig</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> Jackson2ObjectMapperBuilderCustomizer <span class="title function_">customizer</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> builder -&gt; &#123;</span><br><span class="line">            <span class="comment">// 全局配置序列化返回 JSON 处理</span></span><br><span class="line">            <span class="type">JavaTimeModule</span> <span class="variable">javaTimeModule</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">JavaTimeModule</span>();</span><br><span class="line">            <span class="type">DateTimeFormatter</span> <span class="variable">formatter</span> <span class="operator">=</span> DateTimeFormatter.ofPattern(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>);</span><br><span class="line">            javaTimeModule.addSerializer(LocalDateTime.class, <span class="keyword">new</span> <span class="title class_">LocalDateTimeSerializer</span>(formatter));</span><br><span class="line">            builder.modules(javaTimeModule);</span><br><span class="line">            builder.timeZone(TimeZone.getDefault());</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="highlight java"><span class="keyword">import</span> com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+<span class="keyword">import</span> com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+<span class="keyword">import</span> org.springframework.boot.autoconfigure.AutoConfiguration;
+<span class="keyword">import</span> org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer;
+<span class="keyword">import</span> org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration;
+<span class="keyword">import</span> org.springframework.context.annotation.Bean;
+<span class="keyword">import</span> java.time.LocalDateTime;
+<span class="keyword">import</span> java.time.format.DateTimeFormatter;
+<span class="keyword">import</span> java.util.Date;
+<span class="keyword">import</span> java.util.TimeZone;
+
+<span class="meta">@AutoConfiguration(before = JacksonAutoConfiguration.class)</span>
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JacksonConfig</span> &#123;
+
+    <span class="meta">@Bean</span>
+    <span class="keyword">public</span> Jackson2ObjectMapperBuilderCustomizer <span class="title function_">customizer</span><span class="params">()</span> &#123;
+        <span class="keyword">return</span> builder -&gt; &#123;
+            <span class="comment">// 全局配置序列化返回 JSON 处理</span>
+            <span class="type">JavaTimeModule</span> <span class="variable">javaTimeModule</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">JavaTimeModule</span>();
+            <span class="type">DateTimeFormatter</span> <span class="variable">formatter</span> <span class="operator">=</span> DateTimeFormatter.ofPattern(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>);
+            javaTimeModule.addSerializer(LocalDateTime.class, <span class="keyword">new</span> <span class="title class_">LocalDateTimeSerializer</span>(formatter));
+            builder.modules(javaTimeModule);
+            builder.timeZone(TimeZone.getDefault());
+        &#125;;
+    &#125;
+
+&#125;</code></pre>
 <h3 id="8-消息转化器"><a class="markdownIt-Anchor" href="#8-消息转化器"></a> 8. 消息转化器</h3>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.databind.ObjectMapper;</span><br><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.databind.SerializationFeature;</span><br><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.databind.DeserializationFeature;</span><br><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;</span><br><span class="line"><span class="keyword">import</span> org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.servlet.config.annotation.WebMvcConfigurer;</span><br><span class="line"> </span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WebConfig</span> <span class="keyword">implements</span> <span class="title class_">WebMvcConfigurer</span> &#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">configureMessageConverters</span><span class="params">(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters)</span> &#123;</span><br><span class="line">        <span class="type">Jackson2ObjectMapperBuilder</span> <span class="variable">builder</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Jackson2ObjectMapperBuilder</span>()</span><br><span class="line">            .indentOutput(<span class="literal">true</span>)</span><br><span class="line">            .dateFormat(<span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>))</span><br><span class="line">            .modules(<span class="keyword">new</span> <span class="title class_">JavaTimeModule</span>()); <span class="comment">// 添加Java 8日期时间模块支持</span></span><br><span class="line"> </span><br><span class="line">        converters.add(<span class="keyword">new</span> <span class="title class_">MappingJackson2HttpMessageConverter</span>(builder.build()));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="highlight java"><span class="keyword">import</span> com.fasterxml.jackson.databind.ObjectMapper;
+<span class="keyword">import</span> com.fasterxml.jackson.databind.SerializationFeature;
+<span class="keyword">import</span> com.fasterxml.jackson.databind.DeserializationFeature;
+<span class="keyword">import</span> com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+<span class="keyword">import</span> org.springframework.context.annotation.Configuration;
+<span class="keyword">import</span> org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
+<span class="keyword">import</span> org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+<span class="keyword">import</span> org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+ 
+<span class="meta">@Configuration</span>
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WebConfig</span> <span class="keyword">implements</span> <span class="title class_">WebMvcConfigurer</span> &#123;
+ 
+    <span class="meta">@Override</span>
+    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">configureMessageConverters</span><span class="params">(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters)</span> &#123;
+        <span class="type">Jackson2ObjectMapperBuilder</span> <span class="variable">builder</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Jackson2ObjectMapperBuilder</span>()
+            .indentOutput(<span class="literal">true</span>)
+            .dateFormat(<span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>))
+            .modules(<span class="keyword">new</span> <span class="title class_">JavaTimeModule</span>()); <span class="comment">// 添加Java 8日期时间模块支持</span>
+ 
+        converters.add(<span class="keyword">new</span> <span class="title class_">MappingJackson2HttpMessageConverter</span>(builder.build()));
+    &#125;
+&#125;</code></pre>
 <p><strong>个人一般使用ObjectMapper定制器</strong></p>
 
       
@@ -454,7 +589,7 @@
         2020-2025
       
       <span class="footer-info-sep rotate"></span>
-      John Doe
+      Olivia Lotus
     </div>
     
       <div>
@@ -507,8 +642,8 @@
 </div>
 </div>
         <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
-  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="John Doe" class="lazyload">
-  <div class="sidebar-author-name">John Doe</div>
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="Olivia Lotus" class="lazyload">
+  <div class="sidebar-author-name">Olivia Lotus</div>
   <div class="sidebar-description"></div>
 </div>
 <div class="sidebar-state">
@@ -638,7 +773,7 @@
 <script src="https://npm.webcache.cn/mouse-firework@0.1.1/dist/index.umd.js" integrity="sha384-8LyaidD9GPxQQgLJO&#x2F;WRw&#x2F;O2h3BoNq&#x2F;ApI&#x2F;ecpvM6RsrCz2qP2ppBXUKihP4V&#x2F;2d" crossorigin="anonymous"></script>
 
   <script>
-    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["var(--red-1)","var(--red-2)","var(--red-3)","var(--red-4)"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["var(--red-0)"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["var(--red-1)","var(--red-2)","var(--red-3)","var(--red-4)"],"number":3,"duration":[1200,1800,200,400],"shapeOptions":{"radius":[16,32,2,4],"alpha":[0.3,0.5]},"moveOptions":{"emitRadius":[30,50],"diffuseRadius":[30,50]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["var(--red-0)"],"number":2,"duration":[1200,1800,200,400],"shapeOptions":{"radius":[6,10],"alpha":[0.2,0.5],"lineWidth":1},"moveOptions":{"emitRadius":[30,50],"diffuseRadius":[30,50]}}]}'))
   </script>
 
 
@@ -657,14 +792,14 @@
       
       <script data-pjax>
         window.REIMU_POST = {
-          author: "John Doe",
+          author: "Olivia Lotus",
           title: "springboot定制日期格式方法",
-          url: "http://example.com/2024/06/01/springboot%E5%AE%9A%E5%88%B6%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%96%B9%E6%B3%95/",
+          url: "https://olivialotus.github.io/2024/06/01/springboot%E5%AE%9A%E5%88%B6%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%96%B9%E6%B3%95/",
           excerpt: "",
           description: "springboot定制日期格式方法",
-          stripContent: " 1. 全局配置（application.properties/yml） 适用场景：统一整个应用的日期格式 支持的格式：java.util.Date、java.time.*(如LocalDateTime)（需额外配置） 123456# 设置全局日期格式（针对JSON序列化）spring.jackson.date-format=yyyy-MM-dd HH:mm:ssspring.jackson.time-zone=GMT+8  # 设置时区# 针对Java 8日期类型（如LocalDateTime",
+          stripContent: " 1. 全局配置（application.properties/yml） 适用场景：统一整个应用的日期格式 支持的格式：java.util.Date、java.time.*(如LocalDateTime)（需额外配置） # 设置全局日期格式（针对JSON序列化） spring.jackson.date-format=yyyy-MM-dd HH:mm:ss spring.jackson.time-zone=GMT+8  # 设置时区  # 针对Java 8日期类型（如LocalDateTime）需",
           date: "Sat Jun 01 2024 12:12:52 GMT+0000",
-          updated: "Fri Jul 04 2025 06:49:47 GMT+0000",
+          updated: "Fri Jul 04 2025 08:29:50 GMT+0000",
           cover: "/images/banner.webp",
         };
       </script>
