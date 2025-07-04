@@ -1,0 +1,946 @@
+
+  <!DOCTYPE html>
+  <html lang="zh-CN"  
+    
+      data-theme-mode="auto"
+    
+  >
+  <head>
+  
+  <meta charset="utf-8">
+  
+
+  
+
+  
+
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
+  
+  <title>
+    从java入门编程(3)-变量与数据类型 |
+    
+    Hexo
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <link rel="preload" as="style" href="https://fontsapi.zeoseven.com/442/main/result.css" onload="this.rel&#x3D;&#39;stylesheet&#39;" crossorigin><link rel="preload" as="style" href="https://fontsapi.zeoseven.com/442/main/result.css" onload="this.rel&#x3D;&#39;stylesheet&#39;" crossorigin>
+  
+  
+  
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_0khxww3tj3q9.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+  
+  
+    <meta name="description" content="从java入门编程(3)-变量与数据类型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从java入门编程(3)-变量与数据类型">
+<meta property="og:url" content="http://example.com/2025/06/01/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(3)-%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="从java入门编程(3)-变量与数据类型">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-01T12:12:52.000Z">
+<meta property="article:modified_time" content="2025-07-04T06:49:47.769Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL&#x2F;toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx&#x2F;1oA&#x2F;0l8ysE" crossorigin="anonymous">
+  
+  
+  
+  
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css" integrity="sha384-4NN3fZ5AokFyHuoihl7A9qWaCt+HsAtOaUsXwJGRb4&#x2F;SMBtFr2vcNSHR5E8dg0Wk" crossorigin="anonymous">
+
+  
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate">
+        
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+        
+      </div>
+      
+      
+        
+      
+      <div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav">
+    
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+             
+              &#xe62b;
+             
+          </div>
+          <a class="main-nav-link" href="/">首页</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+             
+              &#xe62b;
+             
+          </div>
+          <a class="main-nav-link" href="/archives">归档</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+             
+              &#xe62b;
+             
+          </div>
+          <a class="main-nav-link" href="/about">关于</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+             
+              &#xe62b;
+             
+          </div>
+          <a class="main-nav-link" href="/friend">友链</a>
+        </span>
+      
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅" target="_blank"></a>
+    
+    
+    
+  </nav>
+  
+</div>
+<header id="header">
+  
+    
+      
+        <picture>
+          
+        </picture>
+        
+          <img  fetchpriority="high" src="/images/banner.webp" alt="从java入门编程(3)-变量与数据类型">
+        
+      
+    
+  
+  <div id="header-outer">
+    <div id="header-title">
+      
+        
+        
+          <a href="/" id="logo">
+            <h1 data-aos="slide-up">从java入门编程(3)-变量与数据类型</h1>
+          </a>
+        
+      
+      
+        
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+        <div id="content"  class="sidebar-right" >
+          <aside id="sidebar">
+  
+  
+  
+  <div class="sidebar-wrapper wrap-sticky">
+    <div class="sidebar-wrap" data-aos="fade-up">
+      
+        
+          <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目录</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%87%8A%E4%BB%A3%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text"> 解释代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A3%B0%E6%98%8E%E5%8F%98%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text"> 声明变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text"> 数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">3.1.</span> <span class="toc-text"> 计算机基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8B%E5%86%85%E5%AE%B9%E5%B9%B6%E4%B8%8D%E4%B8%A5%E8%B0%A8"><span class="toc-number">3.1.1.</span> <span class="toc-text"> 以下内容并不严谨</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.2.</span> <span class="toc-text"> 什么是数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.2.1.</span> <span class="toc-text"> 基本数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.2.2.</span> <span class="toc-text"> 引用数据类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.3.</span> <span class="toc-text"> 为什么需要数据类型？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88java%E4%B8%8D%E8%83%BD%E8%87%AA%E5%8A%A8%E5%88%86%E9%85%8D%E7%A9%BA%E9%97%B4"><span class="toc-number">3.4.</span> <span class="toc-text"> 为什么Java不能自动分配空间？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A01%E5%AE%89%E5%85%A8%E7%AC%AC%E4%B8%80%E9%98%B2%E5%86%85%E5%AD%98%E6%B7%B7%E4%B9%B1"><span class="toc-number">3.4.1.</span> <span class="toc-text"> 原因1：安全第一（防内存混乱）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A02%E9%80%9F%E5%BA%A6%E8%87%B3%E4%B8%8A%E7%9B%B4%E6%8E%A5%E6%93%8D%E4%BD%9C%E7%A1%AC%E4%BB%B6"><span class="toc-number">3.4.2.</span> <span class="toc-text"> 原因2：速度至上（直接操作硬件）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A03%E5%8F%AF%E9%A2%84%E6%B5%8B%E6%80%A7%E7%A8%8B%E5%BA%8F%E5%91%98%E6%8E%A7%E5%88%B6%E6%9D%83"><span class="toc-number">3.4.3.</span> <span class="toc-text"> 原因3：可预测性（程序员控制权）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">3.5.</span> <span class="toc-text"> 总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E4%BD%BF%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text"> 变量使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">4.1.</span> <span class="toc-text"> 变量作用域</span></a></li></ol></li></ol>
+      
+  </div>
+</div>
+</div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="John Doe" class="lazyload">
+  <div class="sidebar-author-name">John Doe</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">5</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">2</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">3</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">首页</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">归档</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">关于</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">友链</div>
+      </div>
+    
+  
+</div>
+</div>
+        
+      
+      
+        
+          <div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div>
+        
+      
+    </div>
+  </div>
+
+  <div class="sidebar-widget">
+  
+  </div>
+  
+</aside>
+
+          <section id="main"><article id="post-从java入门编程(3)-变量与数据类型" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <span class="article-date-link" data-aos="zoom-in">
+    <time datetime="2025-06-01T12:12:52.000Z" itemprop="datePublished">2025-06-01</time>
+    <time style="display: none;" id="post-update-time">2025-07-04</time>
+  </span>
+</div>
+
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java/" data-aos="zoom-in">java</a>
+  </div>
+
+
+    </div>
+    <div class="hr-line"></div>
+    
+
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+      
+        <h2 id="解释代码"><a class="markdownIt-Anchor" href="#解释代码"></a> 解释代码</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello, World!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段是项目初始代码,这些代码没学过的应该不知道什么意思,但是不需要在意.</p>
+<p>循序渐进即可.</p>
+<p>我们重点关注这行代码:<strong>System.out.println(“Hello, World!”);</strong></p>
+<p>这行代码的作用是输出 <strong>Hello, World!</strong></p>
+<p>也就是说<strong>System.out.println();</strong> 这行代码的作用就是输出括号里的<strong>值</strong></p>
+<p>然后要知道<strong>注释</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello, World!&quot;</span>); <span class="comment">//此处添加了注释</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>//</strong> 是单行注释(除了单行注释还有多行注释)</p>
+<p>写注释的作用是和记笔记一样,为了程序员能够更好地理解代码,//后面的内容会被编译器忽略</p>
+<p>在生成的class文件不会有注释的存在</p>
+</blockquote>
+<h2 id="声明变量"><a class="markdownIt-Anchor" href="#声明变量"></a> 声明变量</h2>
+<blockquote>
+<p>类似数学题,设一个x为3:</p>
+<p>这其实就相当于我们声明了一个变量<strong>x</strong>,并且让x=3.那么java里是怎么做的呢?</p>
+</blockquote>
+<p>在java声明变量的格式是这样的:<strong>&lt;数据类型&gt; &lt;变量名&gt;=&lt;值&gt;;</strong> 注意要加分号,这是一条语句结束的标志,不加运行会报错.</p>
+<p><strong>int x=3;</strong>  这就表明我们声明一个整数变量x,并且赋值为3</p>
+<p><strong>int</strong>表示整数数据类型,关于数据类型后面会讲详细概念,现在知道什么意思就可以</p>
+<p>数字有了,一行字怎么办?</p>
+<p>用<strong>String</strong>类型:</p>
+<p><strong>String y = “ni好1314”;</strong> 这行语句便是<strong>声明字符串变量y</strong>,并且赋值为 <strong>ni好1314</strong></p>
+<p>需要特别说明,字符串的数字这个说法,大家可以理解成中文里的 <strong>一三一四</strong> 这个形式,也就说 <strong>1314</strong> 和 <strong>“1314”</strong> 完全是两个概念,前者是个整数,后者是一行字.</p>
+<p>将代码改成下面这样.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">int</span> x=<span class="number">3</span>;</span><br><span class="line">        String y=<span class="string">&quot;ni好1314&quot;</span>;</span><br><span class="line">        System.out.println(x);</span><br><span class="line">        System.out.println(y);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">ni好1314</span><br></pre></td></tr></table></figure>
+<p>可以看到System.out.println括号里放进变量的名字,运行程序就把变量的值输出了</p>
+<h2 id="数据类型"><a class="markdownIt-Anchor" href="#数据类型"></a> 数据类型</h2>
+<h3 id="计算机基本概念"><a class="markdownIt-Anchor" href="#计算机基本概念"></a> 计算机基本概念</h3>
+<p>我需要向大家解释一些计算机基本概念:</p>
+<p>计算机用0和1来表示数据(也就是二进制格式),我们的数据在计算机里也都是0和1的组合,通过特定的排列而成,这个数据指的就是我们能通过键盘敲出来的东西,比如中文,英文,数字,其他国家的语言等;</p>
+<p>“Hello” → 变成 01001000 01100101 01101100 01101100 01101111</p>
+<p>25 → 变成 00011001</p>
+<p>一张照片 → 变成几十亿个0和1的组合</p>
+<h4 id="以下内容并不严谨"><a class="markdownIt-Anchor" href="#以下内容并不严谨"></a> 以下内容并不严谨</h4>
+<blockquote>
+<p>这些数据都存在电脑存储器设备中 <strong>(内存,硬盘等)</strong></p>
+<p>而存储器的结构就像是数百万个小格子组成的货架，每个格子只能存0或1</p>
+<p><strong>1个格子 = 1位（bit）</strong> 也就是一个格子的空间我们称为<strong>1bit</strong></p>
+<p><strong>8个格子连起来 = 1字节（byte）</strong> 这是计算机操作的最小单位</p>
+<p>内存示意图：<br />
+[0][1][0][1][1][0][1][0] ← 这8个格子组成1个字节</p>
+</blockquote>
+<h3 id="什么是数据类型"><a class="markdownIt-Anchor" href="#什么是数据类型"></a> 什么是数据类型</h3>
+<p><strong>数据类型是用来根据不同的内存占用需求来准确分配内存空间的一种机制.</strong></p>
+<blockquote>
+<p>java有两类数据类型:基本数据类型,引用数据类型</p>
+</blockquote>
+<h4 id="基本数据类型"><a class="markdownIt-Anchor" href="#基本数据类型"></a> 基本数据类型</h4>
+<p>基本数据类型有8种,下面的占用和使用范围什么的不用记,看看示例即可.</p>
+<blockquote>
+<p>整数类型</p>
+<p>byte</p>
+<ul>
+<li>内存占用：1个字节（8位）</li>
+<li>使用范围：-128到127</li>
+<li>示例：byte b = 100;，b占用1个字节的内存空间，适合存储小范围的整数。</li>
+</ul>
+<p>short</p>
+<ul>
+<li>内存占用：2个字节（16位）</li>
+<li>使用范围：-32768到32767</li>
+<li>示例：short s = 30000;，s占用2个字节的内存空间，适合存储比byte范围更大的整数。</li>
+</ul>
+<p>int</p>
+<ul>
+<li>内存占用：4个字节（32位）</li>
+<li>使用范围：-2,147,483,648到2,147,483,647</li>
+<li>示例：int age = 25;，age占用4个字节的内存空间，是最常用的一种整数类型。</li>
+</ul>
+<p>long</p>
+<ul>
+<li>内存占用：8个字节（64位）</li>
+<li>使用范围：-9,223,372,036,854,775,808到9,223,372,036,854,775,807</li>
+<li>示例：long bigNumber = 1234567890123456789L;，bigNumber占用8个字节的内存空间，适合存储非常大的整数。并且在数值的后面要加上 L</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>浮点数类型(即小数类型)</p>
+<p>float</p>
+<ul>
+<li>内存占用：4个字节（32位）</li>
+<li>使用范围：约±1.4E-45到±3.4028235E38</li>
+<li>示例：float price = 19.99f;，price占用4个字节的内存空间，适合存储单精度浮点数。并且在数值的后面要加上 f</li>
+</ul>
+<p>double</p>
+<ul>
+<li>内存占用：8个字节（64位）</li>
+<li>使用范围：约±4.9E-324到±1.7976931348623157E308</li>
+<li>示例：double pi = 3.141592653589793;，pi占用8个字节的内存空间，适合存储双精度浮点数。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>字符类型</p>
+<p>char</p>
+<ul>
+<li>内存占用：2个字节（16位）</li>
+<li>使用范围：0到65535（Unicode字符）</li>
+<li>示例：char letter = ‘A’;，letter占用2个字节的内存空间，用于存储单个字符。不同于字符串,单个字符串用’'括起来</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>布尔类型</p>
+<p>boolean</p>
+<ul>
+<li>内存占用：通常1个字节（具体取决于JVM实现）</li>
+<li>使用范围：true或false</li>
+<li>示例：boolean isTrue = true;，isTrue占用1个字节的内存空间，用于存储布尔值。布尔值比较特殊,可以理解为 真和假,对和错</li>
+</ul>
+</blockquote>
+<h4 id="引用数据类型"><a class="markdownIt-Anchor" href="#引用数据类型"></a> 引用数据类型</h4>
+<p>除了基本数据类型剩下的全是引用类型<br />
+最常用的就是<strong>String类型</strong></p>
+<blockquote>
+<p>例如 String s = “ni好1314”;</p>
+</blockquote>
+<h3 id="为什么需要数据类型"><a class="markdownIt-Anchor" href="#为什么需要数据类型"></a> 为什么需要数据类型？</h3>
+<table>
+<thead>
+<tr>
+<th>现实数据</th>
+<th>内存表现要求</th>
+<th>矛盾点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>年龄（25岁）</td>
+<td>只需要存数字25</td>
+<td>用几个<strong>字节</strong>存？</td>
+</tr>
+<tr>
+<td>圆周率（3.14159）</td>
+<td>需要存小数且精度高</td>
+<td>如何表示小数点？</td>
+</tr>
+<tr>
+<td>姓名（“张三”）</td>
+<td>需要存多个字符</td>
+<td>一个字符占几字节？</td>
+</tr>
+<tr>
+<td>是否登录（true）</td>
+<td>只需要存真/假两种状态</td>
+<td>用1个位就够，但内存按字节分配</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>如果对所有数据「一刀切」分配同样空间：</strong></p>
+<p>存年龄用8字节 → <strong>99%空间浪费</strong></p>
+<p>存圆周率用1字节 → <strong>精度完全丢失</strong></p>
+<p>存姓名长度不定 → <strong>内存越界崩溃</strong></p>
+<blockquote>
+<p>为了平衡空间效率和计算速度,针对不同的数据应用不同数据类型十分有必要</p>
+</blockquote>
+<h3 id="为什么java不能自动分配空间"><a class="markdownIt-Anchor" href="#为什么java不能自动分配空间"></a> 为什么Java不能自动分配空间？</h3>
+<h4 id="原因1安全第一防内存混乱"><a class="markdownIt-Anchor" href="#原因1安全第一防内存混乱"></a> 原因1：安全第一（防内存混乱）</h4>
+<blockquote>
+<p>不同的柜子都有一定的尺寸</p>
+<ul>
+<li><strong>我往你柜子塞个大象你不就炸了吗!</strong></li>
+<li>Java要求：<code>int age = 25</code> 明确声明用4字节 → <strong>确保不破坏邻居数据</strong></li>
+</ul>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">内存错误演示：</span><br><span class="line">[年龄25][3.14][用户名...]</span><br><span class="line">↓ 自动扩展年龄占用bit数 ↓</span><br><span class="line">[年龄2500000][吞掉小数部分][用户名被截断] → 爆炸了(并非)</span><br></pre></td></tr></table></figure>
+<h4 id="原因2速度至上直接操作硬件"><a class="markdownIt-Anchor" href="#原因2速度至上直接操作硬件"></a> 原因2：速度至上（直接操作硬件）</h4>
+<blockquote>
+<p><strong>计算机本质</strong>：CPU需要<strong>精确知道数据长度</strong>才能快速计算</p>
+<ul>
+<li>加法指令：<code>int+int</code> → CPU知道取4字节做加法</li>
+<li>如果类型模糊：每次都要检测长度 → <strong>速度暴跌100倍</strong></li>
+</ul>
+</blockquote>
+<h4 id="原因3可预测性程序员控制权"><a class="markdownIt-Anchor" href="#原因3可预测性程序员控制权"></a> 原因3：可预测性（程序员控制权）</h4>
+<blockquote>
+<p><strong>核心原则</strong>：把控制权交给程序员</p>
+<table>
+<thead>
+<tr>
+<th>自动分配语言</th>
+<th>Java</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>写 <code>x = 25</code></td>
+<td>写 <code>int x = 25</code></td>
+</tr>
+<tr>
+<td>可能存成2字节</td>
+<td>固定4字节</td>
+</tr>
+<tr>
+<td>当x=50000时 → 溢出</td>
+<td>提前预知范围安全<strong>避免隐蔽bug</strong></td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h3 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h3>
+<blockquote>
+<p><strong>数据类型本质是为了合理分配内存空间并且通过命名让代码更好读的产物,选择合适的数据类型对于程序的正确性和效率非常重要。</strong><br />
+<strong>不同的数据类型不仅是代表分配的空间不同,也是表明jvm虚拟机对待其声明的变量的处理不同(具体不用深究)</strong></p>
+</blockquote>
+<h2 id="变量使用"><a class="markdownIt-Anchor" href="#变量使用"></a> 变量使用</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">9</span>; <span class="comment">// 定义int类型变量x，并赋予初始值9</span></span><br><span class="line">        System.out.println(x); <span class="comment">// 打印9</span></span><br><span class="line">        x = <span class="number">90</span>; <span class="comment">// 重新赋值</span></span><br><span class="line">        System.out.println(x); <span class="comment">// 打印90</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> x; <span class="comment">// 定义一个变量y赋值为x的值</span></span><br><span class="line">        System.out.println(y); <span class="comment">// 打印y的值即90</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>注意:<strong>int x = 9;是定义变量且只定义一次,定义之后x已存在,后面如果再定义同名变量会报错, x = 90;是将x的值覆盖掉</strong></p>
+<p><strong>变量的值可以赋值给其他变量。</strong></p>
+<p>例如:**int y = x;<strong>就是将x的值设为y的初始值</strong></p>
+<p>这里我们来讲一个很重要概念:</p>
+<p>关于一条<strong>赋值语句的顺序要从右往左看</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">9</span>; <span class="comment">// 定义int类型变量x，并赋予初始值9</span></span><br><span class="line">        x = x + <span class="number">8</span>; <span class="comment">// 计算机先计算等号右边的表达式(即x + 8),然后赋值给等号左边的变量</span></span><br><span class="line">        System.out.println(x); <span class="comment">// 打印x的值</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="变量作用域"><a class="markdownIt-Anchor" href="#变量作用域"></a> 变量作用域</h3>
+<p><strong>变量作用域的范围由{…}决定</strong><br />
+越里面的大括号定义的变量作用范围越窄</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">9</span>; <span class="comment">//</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> x; <span class="comment">//这是可以的,因为x定义在更外层的大括号内</span></span><br><span class="line">            System.out.println(y);</span><br><span class="line">        &#125;</span><br><span class="line">        x = x + y; <span class="comment">// 这行代码会报错,因为y的作用域只限于上面这个大括号里面,出了这个大括号就用不了</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+  <nav id="article-nav" data-aos="fade-up">
+    
+    
+    
+    <div class="article-nav-link-wrap article-nav-link-right">
+      
+        
+        
+          <img data-src="https://d-sketon.top/img/_backwebp/bg1.webp" data-sizes="auto" alt="从java入门编程(2)-程序执行流程" class="lazyload">
+        
+      
+      <a href="/2025/05/29/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(2)-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/"></a>
+      <div class="article-nav-caption">后一篇</div>
+      <h3 class="article-nav-title">
+        
+          从java入门编程(2)-程序执行流程
+        
+      </h3>
+    </div>
+    
+  </nav>
+
+
+</article>
+
+
+
+
+
+
+
+
+
+
+</section>
+        </div>
+        <footer id="footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    
+    <div>
+      <span class="icon-copyright"></span>
+      
+      
+      
+        2020-2025
+      
+      <span class="footer-info-sep rotate"></span>
+      John Doe
+    </div>
+    
+      <div>
+        基于&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener external nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+    
+    
+      <div>
+        <span class="icon-brush"></span>
+        6.5k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        00:26
+      </div>
+    
+    
+    
+    
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">总访客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+    
+  </div>
+</footer>
+
+        
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      
+        <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目录</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%87%8A%E4%BB%A3%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text"> 解释代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A3%B0%E6%98%8E%E5%8F%98%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text"> 声明变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text"> 数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">3.1.</span> <span class="toc-text"> 计算机基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8B%E5%86%85%E5%AE%B9%E5%B9%B6%E4%B8%8D%E4%B8%A5%E8%B0%A8"><span class="toc-number">3.1.1.</span> <span class="toc-text"> 以下内容并不严谨</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.2.</span> <span class="toc-text"> 什么是数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.2.1.</span> <span class="toc-text"> 基本数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.2.2.</span> <span class="toc-text"> 引用数据类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.3.</span> <span class="toc-text"> 为什么需要数据类型？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88java%E4%B8%8D%E8%83%BD%E8%87%AA%E5%8A%A8%E5%88%86%E9%85%8D%E7%A9%BA%E9%97%B4"><span class="toc-number">3.4.</span> <span class="toc-text"> 为什么Java不能自动分配空间？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A01%E5%AE%89%E5%85%A8%E7%AC%AC%E4%B8%80%E9%98%B2%E5%86%85%E5%AD%98%E6%B7%B7%E4%B9%B1"><span class="toc-number">3.4.1.</span> <span class="toc-text"> 原因1：安全第一（防内存混乱）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A02%E9%80%9F%E5%BA%A6%E8%87%B3%E4%B8%8A%E7%9B%B4%E6%8E%A5%E6%93%8D%E4%BD%9C%E7%A1%AC%E4%BB%B6"><span class="toc-number">3.4.2.</span> <span class="toc-text"> 原因2：速度至上（直接操作硬件）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A03%E5%8F%AF%E9%A2%84%E6%B5%8B%E6%80%A7%E7%A8%8B%E5%BA%8F%E5%91%98%E6%8E%A7%E5%88%B6%E6%9D%83"><span class="toc-number">3.4.3.</span> <span class="toc-text"> 原因3：可预测性（程序员控制权）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">3.5.</span> <span class="toc-text"> 总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E4%BD%BF%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text"> 变量使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">4.1.</span> <span class="toc-text"> 变量作用域</span></a></li></ol></li></ol>
+      
+  </div>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="John Doe" class="lazyload">
+  <div class="sidebar-author-name">John Doe</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">5</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">2</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">3</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">首页</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">归档</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">关于</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          
+            &#xe62b;
+          
+        </div>
+        <div class="sidebar-menu-link">友链</div>
+      </div>
+    
+  
+</div>
+</div>
+      
+    
+  </div>
+  
+    
+      <div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
+    
+  
+</nav>
+
+    </div>
+    
+    
+    
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.1.1/dist/index.umd.js" integrity="sha384-8LyaidD9GPxQQgLJO&#x2F;WRw&#x2F;O2h3BoNq&#x2F;ApI&#x2F;ecpvM6RsrCz2qP2ppBXUKihP4V&#x2F;2d" crossorigin="anonymous"></script>
+
+  <script>
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["var(--red-1)","var(--red-2)","var(--red-3)","var(--red-4)"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["var(--red-0)"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+
+
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+    
+      
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "John Doe",
+          title: "从java入门编程(3)-变量与数据类型",
+          url: "http://example.com/2025/06/01/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B(3)-%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/",
+          excerpt: "",
+          description: "从java入门编程(3)-变量与数据类型",
+          stripContent: " 解释代码 12345public class App &amp;#123;    public static void main(String[] args) throws Exception &amp;#123;        System.out.println(&amp;quot;Hello, World!&amp;quot;);    &amp;#125;&amp;#125; 这段是项目初始代码,这些代码没学过的应该不知道什么意思,但是不需要在意. 循序渐进即可. 我们重点关注这行代码:System.out.println(“Hel",
+          date: "Sun Jun 01 2025 12:12:52 GMT+0000",
+          updated: "Fri Jul 04 2025 06:49:47 GMT+0000",
+          cover: "/images/banner.webp",
+        };
+      </script>
+       
+    
+    
+      
+        
+<script src="/js/insert_highlight.js" data-pjax></script>
+
+        
+      
+    
+    
+      <script type="module" data-pjax>
+        const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+        
+        const pswp = () => {
+          if (_$$('.article-entry a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-entry',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          if(_$$('.article-gallery a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-gallery',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          window.lightboxStatus = 'done';
+          window.removeEventListener('lightbox:ready', pswp);
+        }
+        if(window.lightboxStatus === 'ready') {
+          pswp()
+        } else {
+          window.addEventListener('lightbox:ready', pswp);
+        }
+      </script>
+      
+        
+
+
+
+
+
+
+
+
+      
+    
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.8.5' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+  </html>
+
