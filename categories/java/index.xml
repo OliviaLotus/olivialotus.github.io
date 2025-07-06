@@ -1,22 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Lotus</title><link>https://example.org/categories/java/</link><description>Recent content in Java on Lotus</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 01 Jun 2025 08:00:00 +0000</lastBuildDate><atom:link href="https://example.org/categories/java/index.xml" rel="self" type="application/rss+xml"/><item><title>从java入门编程(3)-变量与数据类型</title><link>https://example.org/post/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B3-%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link><pubDate>Sun, 01 Jun 2025 08:00:00 +0000</pubDate><guid>https://example.org/post/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B3-%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid><description>&lt;h2 id="解释代码">解释代码&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">class&lt;/span> &lt;span class="nc">App&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">public&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">static&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">void&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nf">main&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">args&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">throws&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Exception&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">out&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="na">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Hello, World!&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这段是项目初始代码,这些代码没学过的应该不知道什么意思,但是不需要在意.&lt;/p>
-&lt;p>循序渐进即可.&lt;/p>
-&lt;p>我们重点关注这行代码:&lt;strong>System.out.println(&amp;ldquo;Hello, World!&amp;rdquo;);&lt;/strong>&lt;/p></description></item><item><title>从java入门编程(2)-程序执行流程</title><link>https://example.org/post/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B2-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link><pubDate>Thu, 29 May 2025 08:00:00 +0000</pubDate><guid>https://example.org/post/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B2-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</guid><description>&lt;h2 id="运行流程">运行流程&lt;/h2>
-&lt;p>下面的内容有些词听不懂没关系,只要明白是一些jdk文件夹里的程序在起作用即可.
-当我们点击右上角的小三角后&lt;/p>
-&lt;h3 id="vscode检测java环境">VSCode检测Java环境&lt;/h3>
-&lt;p>VSCode 会通过配置的 JDK 环境变量来确认 Java 开发环境是否可用。也就是vscode会优先从系统变量里找javahome(大小写无所谓)变量,但是我们并没有配置,先前只是配置path变量里的可执行文件路径而已,所以我们手动在vscode的设置里配置了javahome的路径.
-如果环境变量配置有问题，VSCode 会提示你重新配置 JDK 路径。(也就是报错)&lt;/p></description></item><item><title>从java入门编程(1)-配置环境</title><link>https://example.org/post/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</link><pubDate>Sun, 20 Apr 2025 08:00:00 +0000</pubDate><guid>https://example.org/post/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</guid><description>&lt;h2 id="配置java环境">配置java环境&lt;/h2>
-&lt;p>jdk有很多版本,对教学来说区别甚微&lt;/p>
-&lt;p>以&lt;strong>openjdk17&lt;/strong>作为java环境&lt;/p>
-&lt;p>从&lt;a href="https://mirrors.tuna.tsinghua.edu.cn/Adoptium/17/jdk/x64/windows/">清华源镜像&lt;/a>下载jdk
-&lt;img src="https://example.org/post/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/2025-05-27-21-22-44.png" alt="">
-将下载的zip解压,我喜欢用一个目录专门存放开发环境和工具&lt;/p>
-&lt;p>&lt;strong>电脑小白可以去看下&lt;a href="https://www.bilibili.com/video/BV1VV4y1U7Kn/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=1e6d81bbe21aa9ec935a4fe907b05d20">windows教程&lt;/a>&lt;/strong>&lt;/p></description></item><item><title>springboot定制日期格式方法</title><link>https://example.org/post/springboot%E5%AE%9A%E5%88%B6%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%96%B9%E6%B3%95/</link><pubDate>Sat, 01 Jun 2024 08:00:00 +0000</pubDate><guid>https://example.org/post/springboot%E5%AE%9A%E5%88%B6%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%96%B9%E6%B3%95/</guid><description>&lt;h3 id="1-全局配置applicationpropertiesyml">&lt;strong>1. 全局配置（application.properties/yml）&lt;/strong>&lt;/h3>
-&lt;p>&lt;strong>适用场景&lt;/strong>：统一整个应用的日期格式&lt;br>
-&lt;strong>支持的格式&lt;/strong>：&lt;code>java.util.Date&lt;/code>、&lt;code>java.time.*(如LocalDateTime)&lt;/code>（需额外配置）&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Lotus</title><link>https://example.org/categories/java/</link><description>Recent content from Lotus</description><generator>Hugo</generator><language>zh-cn</language><managingEditor>xxx@example.com (OliviaLotus)</managingEditor><webMaster>xxx@example.com (OliviaLotus)</webMaster><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Sun, 01 Jun 2025 08:00:00 +0000</lastBuildDate><atom:link href="https://example.org/categories/java/index.xml" rel="self" type="application/rss+xml"/><item><title>从java入门编程(3)-变量与数据类型</title><link>https://example.org/post/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B3-%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link><pubDate>Sun, 01 Jun 2025 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B3-%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid><description>
+<![CDATA[<h1>从java入门编程(3)-变量与数据类型</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        
+          <h2 id="解释代码">
+<a class="header-anchor" href="#%e8%a7%a3%e9%87%8a%e4%bb%a3%e7%a0%81"></a>
+解释代码
+</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">App</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Hello, World!&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>这段是项目初始代码,这些代码没学过的应该不知道什么意思,但是不需要在意.</p>
+<p>循序渐进即可.</p>
+<p>我们重点关注这行代码:<strong>System.out.println(&ldquo;Hello, World!&rdquo;);</strong></p>
+        
+        <hr><p>本文2025-06-01首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-06-01</p>]]></description><category>java</category></item><item><title>从java入门编程(2)-程序执行流程</title><link>https://example.org/post/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B2-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link><pubDate>Thu, 29 May 2025 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B2-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</guid><description>
+<![CDATA[<h1>从java入门编程(2)-程序执行流程</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        
+          <h2 id="运行流程">
+<a class="header-anchor" href="#%e8%bf%90%e8%a1%8c%e6%b5%81%e7%a8%8b"></a>
+运行流程
+</h2><p>下面的内容有些词听不懂没关系,只要明白是一些jdk文件夹里的程序在起作用即可.
+当我们点击右上角的小三角后</p>
+<h3 id="vscode检测java环境">
+<a class="header-anchor" href="#vscode%e6%a3%80%e6%b5%8bjava%e7%8e%af%e5%a2%83"></a>
+VSCode检测Java环境
+</h3><p>VSCode 会通过配置的 JDK 环境变量来确认 Java 开发环境是否可用。也就是vscode会优先从系统变量里找javahome(大小写无所谓)变量,但是我们并没有配置,先前只是配置path变量里的可执行文件路径而已,所以我们手动在vscode的设置里配置了javahome的路径.
+如果环境变量配置有问题，VSCode 会提示你重新配置 JDK 路径。(也就是报错)</p>
+        
+        <hr><p>本文2025-05-29首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-05-29</p>]]></description><category>java</category></item><item><title>从java入门编程(1)-配置环境</title><link>https://example.org/post/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</link><pubDate>Sun, 20 Apr 2025 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</guid><description>
+<![CDATA[<h1>从java入门编程(1)-配置环境</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        
+          <h2 id="配置java环境">
+<a class="header-anchor" href="#%e9%85%8d%e7%bd%aejava%e7%8e%af%e5%a2%83"></a>
+配置java环境
+</h2><p>jdk有很多版本,对教学来说区别甚微</p>
+<p>以<strong>openjdk17</strong>作为java环境</p>
+<p>从<a href="https://mirrors.tuna.tsinghua.edu.cn/Adoptium/17/jdk/x64/windows/">清华源镜像</a>下载jdk
+<img src="/post/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/2025-05-27-21-22-44.png" alt="">
+将下载的zip解压,我喜欢用一个目录专门存放开发环境和工具</p>
+        
+        <hr><p>本文2025-04-20首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-04-20</p>]]></description><category>java</category></item><item><title>springboot定制日期格式方法</title><link>https://example.org/post/springboot%E5%AE%9A%E5%88%B6%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%96%B9%E6%B3%95/</link><pubDate>Sat, 01 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/springboot%E5%AE%9A%E5%88%B6%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%96%B9%E6%B3%95/</guid><description>
+<![CDATA[<h1>springboot定制日期格式方法</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        
+          <h3 id="1-全局配置applicationpropertiesyml">
+<a class="header-anchor" href="#1-%e5%85%a8%e5%b1%80%e9%85%8d%e7%bd%aeapplicationpropertiesyml"></a>
+<strong>1. 全局配置（application.properties/yml）</strong>
+</h3><p><strong>适用场景</strong>：统一整个应用的日期格式<br>
+<strong>支持的格式</strong>：<code>java.util.Date</code>、<code>java.time.*(如LocalDateTime)</code>（需额外配置）</p>
+        
+        <hr><p>本文2024-06-01首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-01</p>]]></description><category>java</category></item></channel></rss>
