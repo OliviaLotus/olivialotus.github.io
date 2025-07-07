@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>图形库 on Lotus</title><link>https://example.org/tags/%E5%9B%BE%E5%BD%A2%E5%BA%93/</link><description>Recent content from Lotus</description><generator>Hugo</generator><language>zh-cn</language><managingEditor>xxx@example.com (OliviaLotus)</managingEditor><webMaster>xxx@example.com (OliviaLotus)</webMaster><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Sat, 01 Jun 2024 08:00:00 +0000</lastBuildDate><atom:link href="https://example.org/tags/%E5%9B%BE%E5%BD%A2%E5%BA%93/index.xml" rel="self" type="application/rss+xml"/><item><title>vscode配置图形库环境</title><link>https://example.org/post/vscode%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BD%A2%E5%BA%93%E7%8E%AF%E5%A2%83/</link><pubDate>Sat, 01 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/vscode%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BD%A2%E5%BA%93%E7%8E%AF%E5%A2%83/</guid><description>
 <![CDATA[<h1>vscode配置图形库环境</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
-          <p>vscode下载这一个扩展
+          <h2 id="安装环境">
+<a class="header-anchor" href="#%e5%ae%89%e8%a3%85%e7%8e%af%e5%a2%83"></a>
+安装环境
+</h2><p>vscode下载这一个扩展
 <img src="/post/vscode%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BD%A2%E5%BA%93%E7%8E%AF%E5%A2%83/2025-07-06-17-41-34.png" alt=""></p>
+<p><a href="https://github.com/skeeto/w64devkit/releases">w64devkit</a>
+<img src="/post/vscode%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BD%A2%E5%BA%93%E7%8E%AF%E5%A2%83/2025-07-06-22-48-49.png" alt="">
+下载最新版本复制下载链接到这个<a href="https://xiake.pro/?ref=openi.cn">网站</a>加速下载</p>
+<p>下载后直接解压即可,复制bin文件夹的路径
+<img src="/post/vscode%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BD%A2%E5%BA%93%E7%8E%AF%E5%A2%83/2025-07-06-22-50-59.png" alt="">
+win+s搜索环境变量,在path路径配置路径
+<img src="/post/vscode%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BD%A2%E5%BA%93%E7%8E%AF%E5%A2%83/2025-07-06-22-52-13.png" alt="">
+根据自己的路径来配
+<img src="/post/vscode%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BD%A2%E5%BA%93%E7%8E%AF%E5%A2%83/2025-07-06-22-53-02.png" alt="">
+一直确定即可配置完毕.</p>
         
         <hr><p>本文2024-06-01首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-01</p>]]></description><category>c++</category></item></channel></rss>
