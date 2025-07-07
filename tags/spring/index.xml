@@ -163,7 +163,23 @@
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;/dependencyManagement&gt;</span>
 </span></span></code></pre></div>
         
-        <hr><p>本文2024-06-29首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-29</p>]]></description><category>spring</category></item><item><title>springboot定制日期格式方法</title><link>https://example.org/post/springboot%E5%AE%9A%E5%88%B6%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%96%B9%E6%B3%95/</link><pubDate>Sat, 01 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/springboot%E5%AE%9A%E5%88%B6%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%96%B9%E6%B3%95/</guid><description>
+        <hr><p>本文2024-06-29首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-29</p>]]></description><category>spring</category></item><item><title>ruoyi-vue-plus中数据脱敏功能</title><link>https://example.org/post/ruoyi-vue-plus%E4%B8%AD%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F%E5%8A%9F%E8%83%BD/</link><pubDate>Wed, 05 Jun 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/ruoyi-vue-plus%E4%B8%AD%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F%E5%8A%9F%E8%83%BD/</guid><description>
+<![CDATA[<h1>ruoyi-vue-plus中数据脱敏功能</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        
+          <h3 id="1-注解标注">
+<a class="header-anchor" href="#1-%e6%b3%a8%e8%a7%a3%e6%a0%87%e6%b3%a8"></a>
+1. 注解标注
+</h3><ul>
+<li>
+<p><strong>实体类字段标注</strong>：在实体类的字段上添加 <code>@Sensitive</code> 注解，指定脱敏策略和角色权限。例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">User</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Sensitive</span><span class="p">(</span><span class="n">strategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SensitiveStrategy</span><span class="p">.</span><span class="na">PHONE</span><span class="p">,</span><span class="w"> </span><span class="n">perms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;system:user:edit&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">phonenumber</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>这里，<code>phonenumber</code> 字段被标注为使用 <code>PHONE</code> 脱敏策略，并且只有具有 <code>system:user:edit</code> 权限的用户才能看到脱敏后的手机号。</p>
+        
+        <hr><p>本文2024-06-05首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-05</p>]]></description><category>java</category></item><item><title>springboot定制日期格式方法</title><link>https://example.org/post/springboot%E5%AE%9A%E5%88%B6%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%96%B9%E6%B3%95/</link><pubDate>Sat, 01 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/springboot%E5%AE%9A%E5%88%B6%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%96%B9%E6%B3%95/</guid><description>
 <![CDATA[<h1>springboot定制日期格式方法</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <h3 id="1-全局配置applicationpropertiesyml">
