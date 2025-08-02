@@ -39,90 +39,243 @@ VSCode检测Java环境
 <img src="/post/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/2025-05-27-21-22-44.png" alt="">
 将下载的zip解压,我喜欢用一个目录专门存放开发环境和工具</p>
         
-        <hr><p>本文2025-04-20首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-04-20</p>]]></description><category>java</category></item><item><title>常用依赖</title><link>https://example.org/post/%E5%B8%B8%E7%94%A8%E4%BE%9D%E8%B5%96/</link><pubDate>Sat, 29 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/%E5%B8%B8%E7%94%A8%E4%BE%9D%E8%B5%96/</guid><description>
-<![CDATA[<h1>常用依赖</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        <hr><p>本文2025-04-20首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-04-20</p>]]></description><category>java</category></item><item><title>java基础学生管理系统</title><link>https://example.org/post/%E5%AD%A6java%E5%9F%BA%E7%A1%80%E6%97%B6%E9%9A%BE%E5%A6%82%E7%99%BB%E5%A4%A9%E7%9A%84%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</link><pubDate>Sat, 19 Apr 2025 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/%E5%AD%A6java%E5%9F%BA%E7%A1%80%E6%97%B6%E9%9A%BE%E5%A6%82%E7%99%BB%E5%A4%A9%E7%9A%84%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</guid><description>
+<![CDATA[<h1>java基础学生管理系统</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        
+          <blockquote>
+<p>一个十分简单的称不上项目的学习项目</p>
+<p>但是当时阅历不够做起来也是磕磕碰碰断断续续</p></blockquote>
+<h2 id="一项目概述">
+<a class="header-anchor" href="#%e4%b8%80%e9%a1%b9%e7%9b%ae%e6%a6%82%e8%bf%b0"></a>
+一、项目概述
+</h2><p><strong>目标</strong>：实现一个基于控制台的“学生信息管理系统”，支持以下功能：</p>
+        
+        <hr><p>本文2025-04-19首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-04-19</p>]]></description><category>java</category></item><item><title>spring国际化</title><link>https://example.org/post/spring%E5%9B%BD%E9%99%85%E5%8C%96/</link><pubDate>Sat, 29 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/spring%E5%9B%BD%E9%99%85%E5%8C%96/</guid><description>
+<![CDATA[<h1>spring国际化</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        
+          <h3 id="0-实现代码">
+<a class="header-anchor" href="#0-%e5%ae%9e%e7%8e%b0%e4%bb%a3%e7%a0%81"></a>
+0. 实现代码
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@NoArgsConstructor</span><span class="p">(</span><span class="n">access</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AccessLevel</span><span class="p">.</span><span class="na">PRIVATE</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MessageUtils</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ① 容器启动后拿到 MessageSource Bean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">MessageSource</span><span class="w"> </span><span class="n">MESSAGE_SOURCE</span><span class="w"> </span><span class="o">=</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">SpringUtils</span><span class="p">.</span><span class="na">getBean</span><span class="p">(</span><span class="n">MessageSource</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ② i18n 调用</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">message</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">code</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="p">...</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">MESSAGE_SOURCE</span><span class="p">.</span><span class="na">getMessage</span><span class="p">(</span><span class="n">code</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="n">LocaleContextHolder</span><span class="p">.</span><span class="na">getLocale</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NoSuchMessageException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">code</span><span class="p">;</span><span class="w">               </span><span class="c1">// ③ 兜底</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><hr>
+<h3 id="-获取-messagesource">
+<a class="header-anchor" href="#-%e8%8e%b7%e5%8f%96-messagesource"></a>
+① 获取 MessageSource
+</h3><table>
+  <thead>
+      <tr>
+          <th>位置</th>
+          <th>关键源码</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ApplicationContext 启动</td>
+          <td><code>AbstractApplicationContext#prepareBeanFactory</code> 注册单例<!-- raw HTML omitted --><code>beanFactory.registerResolvableDependency(MessageSource.class, context);</code></td>
+      </tr>
+      <tr>
+          <td>Boot 自动装配</td>
+          <td><code>MessageSourceAutoConfiguration</code> → <code>ResourceBundleMessageSource</code></td>
+      </tr>
+      <tr>
+          <td>业务侧</td>
+          <td>Hutool <code>SpringUtils.getBean(MessageSource.class)</code> 等价于<!-- raw HTML omitted --><code>applicationContext.getBean(MessageSource.class)</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="-localecontextholdergetlocale">
+<a class="header-anchor" href="#-localecontextholdergetlocale"></a>
+② LocaleContextHolder.getLocale()
+</h3><table>
+  <thead>
+      <tr>
+          <th>位置</th>
+          <th>关键源码</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>DispatcherServlet</code></td>
+          <td><code>LocaleContextHolder.setLocale(locale, false);</code></td>
+      </tr>
+      <tr>
+          <td>线程变量</td>
+          <td><code>LocaleContextHolder.getLocale()</code> →<!-- raw HTML omitted --><code>getLocaleContext().getLocale()</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="-message_sourcegetmessage-源码级链路">
+<a class="header-anchor" href="#-message_sourcegetmessage-%e6%ba%90%e7%a0%81%e7%ba%a7%e9%93%be%e8%b7%af"></a>
+③ MESSAGE_SOURCE.getMessage(&hellip;) 源码级链路
+</h3><h4 id="31-入口abstractmessagesourcegetmessage">
+<a class="header-anchor" href="#31-%e5%85%a5%e5%8f%a3abstractmessagesourcegetmessage"></a>
+3.1 入口：AbstractMessageSource#getMessage
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getMessage</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">code</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="n">Locale</span><span class="w"> </span><span class="n">locale</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">throws</span><span class="w"> </span><span class="n">NoSuchMessageException</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getMessageInternal</span><span class="p">(</span><span class="n">code</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="n">locale</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">msg</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">fallback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getDefaultMessage</span><span class="p">(</span><span class="n">code</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fallback</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">fallback</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NoSuchMessageException</span><span class="p">(</span><span class="n">code</span><span class="p">,</span><span class="w"> </span><span class="n">locale</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h4 id="32-内部解析getmessageinternal">
+<a class="header-anchor" href="#32-%e5%86%85%e9%83%a8%e8%a7%a3%e6%9e%90getmessageinternal"></a>
+3.2 内部解析：getMessageInternal
+</h4><ul>
+<li><strong>无参数快速路径</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isAlwaysUseMessageFormat</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">ObjectUtils</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">(</span><span class="n">args</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">resolveCodeWithoutArguments</span><span class="p">(</span><span class="n">code</span><span class="p">,</span><span class="w"> </span><span class="n">locale</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><ul>
+<li><strong>带参数格式化路径</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resolveArguments</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="n">locale</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">MessageFormat</span><span class="w"> </span><span class="n">mf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resolveCode</span><span class="p">(</span><span class="n">code</span><span class="p">,</span><span class="w"> </span><span class="n">locale</span><span class="p">);</span><span class="w">   </span><span class="c1">// 重点</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mf</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">synchronized</span><span class="w"> </span><span class="p">(</span><span class="n">mf</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">mf</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">args</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h4 id="33-resolvecoderesourcebundlemessagesource">
+<a class="header-anchor" href="#33-resolvecoderesourcebundlemessagesource"></a>
+3.3 resolveCode：ResourceBundleMessageSource
+</h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">protected</span><span class="w"> </span><span class="n">MessageFormat</span><span class="w"> </span><span class="nf">resolveCode</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">code</span><span class="p">,</span><span class="w"> </span><span class="n">Locale</span><span class="w"> </span><span class="n">locale</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">basename</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">getBasenameSet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">ResourceBundle</span><span class="w"> </span><span class="n">bundle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getResourceBundle</span><span class="p">(</span><span class="n">basename</span><span class="p">,</span><span class="w"> </span><span class="n">locale</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bundle</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">MessageFormat</span><span class="w"> </span><span class="n">mf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getMessageFormat</span><span class="p">(</span><span class="n">bundle</span><span class="p">,</span><span class="w"> </span><span class="n">code</span><span class="p">,</span><span class="w"> </span><span class="n">locale</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mf</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">mf</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h4 id="34-getmessageformat缓存--解析">
+<a class="header-anchor" href="#34-getmessageformat%e7%bc%93%e5%ad%98--%e8%a7%a3%e6%9e%90"></a>
+3.4 getMessageFormat：缓存 &amp; 解析
+</h4><ol>
+<li>先画结构（三级 Map）</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cachedBundleMessageFormats
+</span></span><span class="line"><span class="cl">    │
+</span></span><span class="line"><span class="cl">    ├─ bundle①  →  Map&lt;code, Map&lt;Locale, MessageFormat&gt;&gt;
+</span></span><span class="line"><span class="cl">    │               ├─ code=&#34;welcome&#34; → Map
+</span></span><span class="line"><span class="cl">    │               │                  ├─ Locale.CHINA  → MessageFormat(&#34;欢迎，{0}！&#34;)
+</span></span><span class="line"><span class="cl">    │               │                  └─ Locale.US     → MessageFormat(&#34;Welcome, {0}!&#34;)
+</span></span><span class="line"><span class="cl">    │               └─ code=&#34;error.404&#34; → Map ...
+</span></span><span class="line"><span class="cl">    │
+</span></span><span class="line"><span class="cl">    └─ bundle②  → ...
+</span></span></code></pre></div><ul>
+<li><strong>第 1 级 key</strong>：<code>ResourceBundle</code> 实例（对应 basename + Locale 组合）</li>
+<li><strong>第 2 级 key</strong>：<code>code</code>（properties 里的 key）</li>
+<li><strong>第 3 级 key</strong>：<code>Locale</code>（语言变体）</li>
+</ul>
+<hr>
+<ol start="2">
+<li>源码</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Locale</span><span class="p">,</span><span class="w"> </span><span class="n">MessageFormat</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">codeMap</span><span class="w"> </span><span class="o">=</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Locale</span><span class="p">,</span><span class="w"> </span><span class="n">MessageFormat</span><span class="o">&gt;&gt;</span><span class="p">)</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">cachedBundleMessageFormats</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">bundle</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></div><ul>
+<li><strong>作用</strong>：先拿到<strong>这个 bundle</strong>对应的第二级 Map。</li>
+<li><strong>bundle 是什么</strong>：<code>ResourceBundleMessageSource</code> 通过 <code>basename + Locale</code> 创建，<strong>不同 Locale 会对应不同 bundle 实例</strong>。</li>
+</ul>
+<hr>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Map</span><span class="o">&lt;</span><span class="n">Locale</span><span class="p">,</span><span class="w"> </span><span class="n">MessageFormat</span><span class="o">&gt;</span><span class="w"> </span><span class="n">localeMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">codeMap</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">localeMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">codeMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">code</span><span class="p">);</span><span class="w">    </span><span class="c1">// 第二级查找</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><ul>
+<li><strong>作用</strong>：看看这个 bundle 里是否缓存过<strong>这个 code</strong>对应的第三级 Map。</li>
+<li><strong>为 null</strong>：表示该 code 在这个 bundle 内<strong>从未被解析过</strong>。</li>
+</ul>
+<hr>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">localeMap</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">MessageFormat</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">localeMap</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">locale</span><span class="p">);</span><span class="w"> </span><span class="c1">// 第三级查找</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w">   </span><span class="c1">// 直接命中缓存</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><ul>
+<li><strong>作用</strong>：同一 bundle 内，同一个 code 可能对应多种 Locale（如 zh_CN、zh_TW、en_US）。<br>
+这里再精确匹配一次 Locale，命中就直接返回，<strong>避免重复 new MessageFormat</strong>。</li>
+</ul>
+<hr>
+<ol start="3">
+<li>如果三级都没命中？</li>
+</ol>
+<p>源码紧接着：</p>
+        
+        <hr><p>本文2024-06-29首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-29</p>]]></description><category>spring</category></item><item><title>springboot常用依赖</title><link>https://example.org/post/springboot%E5%B8%B8%E7%94%A8%E4%BE%9D%E8%B5%96/</link><pubDate>Sat, 29 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/springboot%E5%B8%B8%E7%94%A8%E4%BE%9D%E8%B5%96/</guid><description>
+<![CDATA[<h1>springboot常用依赖</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;properties&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;mybatis.version&gt;</span>3.0.4<span class="nt">&lt;/mybatis.version&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;pagehelper.version&gt;</span>2.1.0<span class="nt">&lt;/pagehelper.version&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;revision&gt;</span>1.0.0<span class="nt">&lt;/revision&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;java.version&gt;</span>17<span class="nt">&lt;/java.version&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;knife4j.version&gt;</span>4.5.0<span class="nt">&lt;/knife4j.version&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;fastexcel.version&gt;</span>1.2.0<span class="nt">&lt;/fastexcel.version&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;mybatis-plus.version&gt;</span>3.5.12<span class="nt">&lt;/mybatis-plus.version&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;mapstruct-plus.version&gt;</span>1.4.8<span class="nt">&lt;/mapstruct-plus.version&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;mapstruct-plus.lombok.version&gt;</span>0.2.0<span class="nt">&lt;/mapstruct-plus.lombok.version&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="nt">&lt;hutool-all.version&gt;</span>5.8.38<span class="nt">&lt;/hutool-all.version&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;springdoc.version&gt;</span>2.8.8<span class="nt">&lt;/springdoc.version&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;satoken.version&gt;</span>1.44.0<span class="nt">&lt;/satoken.version&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;springdoc.version&gt;</span>2.5.0<span class="nt">&lt;/springdoc.version&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="nt">&lt;spring-admin.version&gt;</span>3.5.0<span class="nt">&lt;/spring-admin.version&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;sa-token.version&gt;</span>1.43.0<span class="nt">&lt;/sa-token.version&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;sa-token-jwt.version&gt;</span>1.43.0<span class="nt">&lt;/sa-token-jwt.version&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="nt">&lt;sms4j.version&gt;</span>3.3.5<span class="nt">&lt;/sms4j.version&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;ip2region.version&gt;</span>2.7.0<span class="nt">&lt;/ip2region.version&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;redisson.version&gt;</span>3.50.0<span class="nt">&lt;/redisson.version&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;lock4j.version&gt;</span>2.2.7<span class="nt">&lt;/lock4j.version&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="nt">&lt;simple-java-mail.version&gt;</span>8.12.6<span class="nt">&lt;/simple-java-mail.version&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="nt">&lt;easy-captcha.version&gt;</span>1.6.2<span class="nt">&lt;/easy-captcha.version&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;amqp-client.version&gt;</span>5.25.0<span class="nt">&lt;/amqp-client.version&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;minio.version&gt;</span>8.5.17<span class="nt">&lt;/minio.version&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;redisson.version&gt;</span>3.46.0<span class="nt">&lt;/redisson.version&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;lock4j.version&gt;</span>2.2.7<span class="nt">&lt;/lock4j.version&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;logstash.version&gt;</span>8.1<span class="nt">&lt;/logstash.version&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;UserAgentUtils.version&gt;</span>1.21<span class="nt">&lt;/UserAgentUtils.version&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;/properties&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;dependencyManagement&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="nt">&lt;dependencies&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- Spring Boot 核心依赖 --&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- 权限认证 --&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>cn.dev33<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>sa-token-spring-boot3-starter<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${satoken.version}<span class="nt">&lt;/version&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-test<span class="nt">&lt;/artifactId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>cn.dev33<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>sa-token-jwt<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${satoken.version}<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- 数据库 --&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>com.baomidou<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>mybatis-plus-spring-boot3-starter<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${mybatis-plus.version}<span class="nt">&lt;/version&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-aop<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>com.baomidou<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>mybatis-plus-jsqlparser<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${mybatis-plus.version}<span class="nt">&lt;/version&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-validation<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>io.github.linpeilie<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>mapstruct-plus-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${mapstruct-plus.version}<span class="nt">&lt;/version&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- 数据库相关 --&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>com.mysql<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>mysql-connector-j<span class="nt">&lt;/artifactId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;scope&gt;</span>runtime<span class="nt">&lt;/scope&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>org.mybatis.spring.boot<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>mybatis-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${mybatis.version}<span class="nt">&lt;/version&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>com.github.pagehelper<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>pagehelper-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${pagehelper.version}<span class="nt">&lt;/version&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- 缓存与消息队列 --&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-data-redis<span class="nt">&lt;/artifactId&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- 开发工具 --&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>lombok<span class="nt">&lt;/artifactId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;optional&gt;</span>true<span class="nt">&lt;/optional&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>cn.hutool<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>hutool-all<span class="nt">&lt;/artifactId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${hutool-all.version}<span class="nt">&lt;/version&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>org.springdoc<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>springdoc-openapi-starter-webmvc-ui<span class="nt">&lt;/artifactId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${springdoc.version}<span class="nt">&lt;/version&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- 监控与管理 --&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- 监控 --&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
 </span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>de.codecentric<span class="nt">&lt;/groupId&gt;</span>
 </span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>spring-boot-admin-starter-server<span class="nt">&lt;/artifactId&gt;</span>
@@ -133,23 +286,17 @@ VSCode检测Java环境
 </span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>spring-boot-admin-starter-client<span class="nt">&lt;/artifactId&gt;</span>
 </span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${spring-admin.version}<span class="nt">&lt;/version&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- 工具 --&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-actuator<span class="nt">&lt;/artifactId&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- 安全与权限 --&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>cn.dev33<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>sa-token-spring-boot3-starter<span class="nt">&lt;/artifactId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${sa-token.version}<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>cn.hutool<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>hutool-all<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${hutool-all.version}<span class="nt">&lt;/version&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>cn.dev33<span class="nt">&lt;/groupId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>sa-token-jwt<span class="nt">&lt;/artifactId&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${sa-token-jwt.version}<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>cn.idev.excel<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>fastexcel<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${fastexcel.version}<span class="nt">&lt;/version&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- 短信 --&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
 </span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>org.dromara.sms4j<span class="nt">&lt;/groupId&gt;</span>
@@ -168,40 +315,111 @@ VSCode检测Java环境
 </span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>easy-captcha<span class="nt">&lt;/artifactId&gt;</span>
 </span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${easy-captcha.version}<span class="nt">&lt;/version&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- 接口文档 --&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>com.github.xiaoymin<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>knife4j-openapi3-jakarta-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${knife4j.version}<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- IP设备 --&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>eu.bitwalker<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>UserAgentUtils<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${UserAgentUtils.version}<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>org.lionsoul<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>ip2region<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${ip2region.version}<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="c">&lt;!--分布式--&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>org.redisson<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>redisson-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${redisson.version}<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;groupId&gt;</span>com.baomidou<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;artifactId&gt;</span>lock4j-redisson-spring-boot-starter<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;version&gt;</span>${lock4j.version}<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/dependency&gt;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="c">&lt;!--
-</span></span></span><span class="line"><span class="cl"><span class="c">            &lt;dependency&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;groupId&gt;com.rabbitmq&lt;/groupId&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;artifactId&gt;amqp-client&lt;/artifactId&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;version&gt;${amqp-client.version}&lt;/version&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">            &lt;/dependency&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">            &lt;dependency&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;groupId&gt;io.minio&lt;/groupId&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;artifactId&gt;minio&lt;/artifactId&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;version&gt;${minio.version}&lt;/version&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">            &lt;/dependency&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">            &lt;dependency&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;groupId&gt;org.redisson&lt;/groupId&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;artifactId&gt;redisson-spring-boot-starter&lt;/artifactId&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;version&gt;${redisson.version}&lt;/version&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">            &lt;/dependency&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">            &lt;dependency&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;groupId&gt;com.baomidou&lt;/groupId&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;artifactId&gt;lock4j-redisson-spring-boot-starter&lt;/artifactId&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;version&gt;${lock4j.version}&lt;/version&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">            &lt;/dependency&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">            &lt;dependency&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;groupId&gt;net.logstash.logback&lt;/groupId&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;artifactId&gt;logstash-logback-encoder&lt;/artifactId&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;version&gt;${logstash.version}&lt;/version&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">            &lt;/dependency&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">            &lt;dependency&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">                &lt;artifactId&gt;spring-boot-starter-data-elasticsearch&lt;/artifactId&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">            &lt;/dependency&gt;
-</span></span></span><span class="line"><span class="cl"><span class="c">        --&gt;</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="nt">&lt;/dependencies&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;/dependencyManagement&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;build&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;plugins&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;plugin&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;artifactId&gt;</span>maven-compiler-plugin<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;configuration&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nt">&lt;source&gt;</span>${java.version}<span class="nt">&lt;/source&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nt">&lt;target&gt;</span>${java.version}<span class="nt">&lt;/target&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nt">&lt;annotationProcessorPaths&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;path&gt;</span>
+</span></span><span class="line"><span class="cl">                                <span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                                <span class="nt">&lt;artifactId&gt;</span>lombok<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                                <span class="nt">&lt;version&gt;</span>${lombok.version}<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;/path&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;path&gt;</span>
+</span></span><span class="line"><span class="cl">                                <span class="nt">&lt;groupId&gt;</span>io.github.linpeilie<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                                <span class="nt">&lt;artifactId&gt;</span>mapstruct-plus-processor<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                                <span class="nt">&lt;version&gt;</span>${mapstruct-plus.version}<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;/path&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;path&gt;</span>
+</span></span><span class="line"><span class="cl">                                <span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                                <span class="nt">&lt;artifactId&gt;</span>lombok-mapstruct-binding<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                                <span class="nt">&lt;version&gt;</span>${mapstruct-plus.lombok.version}<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;/path&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;path&gt;</span>
+</span></span><span class="line"><span class="cl">                                <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                                <span class="nt">&lt;artifactId&gt;</span>spring-boot-configuration-processor<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;/path&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nt">&lt;/annotationProcessorPaths&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;/configuration&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;/plugin&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;plugin&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;configuration&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nt">&lt;excludes&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;exclude&gt;</span>
+</span></span><span class="line"><span class="cl">                                <span class="nt">&lt;groupId&gt;</span>org.projectlombok<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                                <span class="nt">&lt;artifactId&gt;</span>lombok<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;/exclude&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nt">&lt;/excludes&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;/configuration&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;/plugin&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="c">&lt;!-- 统一版本号管理 --&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;plugin&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;artifactId&gt;</span>flatten-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;configuration&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nt">&lt;updatePomFile&gt;</span>true<span class="nt">&lt;/updatePomFile&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nt">&lt;flattenMode&gt;</span>resolveCiFriendliesOnly<span class="nt">&lt;/flattenMode&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;/configuration&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;executions&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nt">&lt;execution&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;id&gt;</span>flatten<span class="nt">&lt;/id&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;phase&gt;</span>process-resources<span class="nt">&lt;/phase&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;goals&gt;</span>
+</span></span><span class="line"><span class="cl">                                <span class="nt">&lt;goal&gt;</span>flatten<span class="nt">&lt;/goal&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;/goals&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nt">&lt;/execution&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nt">&lt;execution&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;id&gt;</span>flatten.clean<span class="nt">&lt;/id&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;phase&gt;</span>clean<span class="nt">&lt;/phase&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;goals&gt;</span>
+</span></span><span class="line"><span class="cl">                                <span class="nt">&lt;goal&gt;</span>clean<span class="nt">&lt;/goal&gt;</span>
+</span></span><span class="line"><span class="cl">                            <span class="nt">&lt;/goals&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="nt">&lt;/execution&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;/executions&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;/plugin&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/plugins&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/build&gt;</span>
 </span></span></code></pre></div>
         
         <hr><p>本文2024-06-29首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-29</p>]]></description><category>spring</category></item><item><title>ruoyi-vue-plus中数据脱敏功能</title><link>https://example.org/post/ruoyi-vue-plus%E4%B8%AD%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F%E5%8A%9F%E8%83%BD/</link><pubDate>Wed, 05 Jun 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/ruoyi-vue-plus%E4%B8%AD%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F%E5%8A%9F%E8%83%BD/</guid><description>
@@ -220,7 +438,73 @@ VSCode检测Java环境
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div><p>这里，<code>phonenumber</code> 字段被标注为使用 <code>PHONE</code> 脱敏策略，并且只有具有 <code>system:user:edit</code> 权限的用户才能看到脱敏后的手机号。</p>
         
-        <hr><p>本文2024-06-05首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-05</p>]]></description><category>java</category></item><item><title>springboot定制日期格式方法</title><link>https://example.org/post/springboot%E5%AE%9A%E5%88%B6%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%96%B9%E6%B3%95/</link><pubDate>Sat, 01 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/springboot%E5%AE%9A%E5%88%B6%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%96%B9%E6%B3%95/</guid><description>
+        <hr><p>本文2024-06-05首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-05</p>]]></description><category>java</category></item><item><title>ruoyi-vue-plus数据过滤功能</title><link>https://example.org/post/ruoyi-vue-plus%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4%E5%8A%9F%E8%83%BD/</link><pubDate>Wed, 05 Jun 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/ruoyi-vue-plus%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4%E5%8A%9F%E8%83%BD/</guid><description>
+<![CDATA[<h1>ruoyi-vue-plus数据过滤功能</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        
+          <h2 id="一代码不完整需结合完整源码">
+<a class="header-anchor" href="#%e4%b8%80%e4%bb%a3%e7%a0%81%e4%b8%8d%e5%ae%8c%e6%95%b4%e9%9c%80%e7%bb%93%e5%90%88%e5%ae%8c%e6%95%b4%e6%ba%90%e7%a0%81"></a>
+一、代码不完整,需结合完整源码
+</h2><h2 id="二核心组件职责说明">
+<a class="header-anchor" href="#%e4%ba%8c%e6%a0%b8%e5%bf%83%e7%bb%84%e4%bb%b6%e8%81%8c%e8%b4%a3%e8%af%b4%e6%98%8e"></a>
+二、核心组件职责说明
+</h2><table>
+  <thead>
+      <tr>
+          <th>组件</th>
+          <th>类名</th>
+          <th>核心职责</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>切面</strong></td>
+          <td>DataPermissionAspect</td>
+          <td>前置上下文准备和后置资源清理</td>
+      </tr>
+      <tr>
+          <td><strong>拦截器</strong></td>
+          <td>PlusDataPermissionInterceptor</td>
+          <td>拦截SQL执行，协调权限处理流程</td>
+      </tr>
+      <tr>
+          <td><strong>处理器</strong></td>
+          <td>PlusDataPermissionHandler</td>
+          <td>解析注解，生成权限过滤条件</td>
+      </tr>
+      <tr>
+          <td><strong>上下文</strong></td>
+          <td>DataPermissionHelper</td>
+          <td>管理线程级权限上下文</td>
+      </tr>
+      <tr>
+          <td><strong>解析器</strong></td>
+          <td>JSqlParser</td>
+          <td>解析和修改SQL语句</td>
+      </tr>
+      <tr>
+          <td><strong>枚举</strong></td>
+          <td>DataScopeType</td>
+          <td>定义不同数据范围的处理规则</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="三详细执行流程分析">
+<a class="header-anchor" href="#%e4%b8%89%e8%af%a6%e7%bb%86%e6%89%a7%e8%a1%8c%e6%b5%81%e7%a8%8b%e5%88%86%e6%9e%90"></a>
+三、详细执行流程分析
+</h2><h3 id="阶段0切面设置权限上下文前置处理">
+<a class="header-anchor" href="#%e9%98%b6%e6%ae%b50%e5%88%87%e9%9d%a2%e8%ae%be%e7%bd%ae%e6%9d%83%e9%99%90%e4%b8%8a%e4%b8%8b%e6%96%87%e5%89%8d%e7%bd%ae%e5%a4%84%e7%90%86"></a>
+阶段0：切面设置权限上下文（前置处理）
+</h3><p><strong>执行点</strong>：<code>DataPermissionAspect.doBefore()</code></p>
+        
+        <hr><p>本文2024-06-05首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-05</p>]]></description><category>java</category></item><item><title>RuoYi-Vue-Plus 的事件与日志记录机制详解</title><link>https://example.org/post/ruoyi-vue-plus%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%B8%8E%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95%E6%9C%BA%E5%88%B6/</link><pubDate>Wed, 05 Jun 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/ruoyi-vue-plus%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%B8%8E%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95%E6%9C%BA%E5%88%B6/</guid><description>
+<![CDATA[<h1>RuoYi-Vue-Plus 的事件与日志记录机制详解</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        
+          <h2 id="一事件机制简介">
+<a class="header-anchor" href="#%e4%b8%80%e4%ba%8b%e4%bb%b6%e6%9c%ba%e5%88%b6%e7%ae%80%e4%bb%8b"></a>
+一、事件机制简介
+</h2><p>事件机制是 Spring 框架中的一种设计模式，它允许应用程序在运行时动态地发布和订阅事件。这种机制的核心思想是将事件的发布者（Publisher）和事件的订阅者（Subscriber）解耦，使得两者之间不需要直接的依赖关系。在 RuoYi-Vue-Plus 中，事件机制被用于记录登录信息、操作日志等场景。</p>
+        
+        <hr><p>本文2024-06-05首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-05</p>]]></description><category>java</category></item><item><title>springboot定制日期格式方法</title><link>https://example.org/post/springboot%E5%AE%9A%E5%88%B6%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%96%B9%E6%B3%95/</link><pubDate>Tue, 04 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/springboot%E5%AE%9A%E5%88%B6%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E6%96%B9%E6%B3%95/</guid><description>
 <![CDATA[<h1>springboot定制日期格式方法</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <h3 id="1-全局配置applicationpropertiesyml">
@@ -229,4 +513,4 @@ VSCode检测Java环境
 </h3><p><strong>适用场景</strong>：统一整个应用的日期格式<br>
 <strong>支持的格式</strong>：<code>java.util.Date</code>、<code>java.time.*(如LocalDateTime)</code>（需额外配置）</p>
         
-        <hr><p>本文2024-06-01首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-01</p>]]></description><category>java</category></item></channel></rss>
+        <hr><p>本文2024-06-04首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-04</p>]]></description><category>java</category></item></channel></rss>

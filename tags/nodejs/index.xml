@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nodejs on Lotus</title><link>https://example.org/tags/nodejs/</link><description>Recent content from Lotus</description><generator>Hugo</generator><language>zh-cn</language><managingEditor>xxx@example.com (OliviaLotus)</managingEditor><webMaster>xxx@example.com (OliviaLotus)</webMaster><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Mon, 02 Sep 2024 08:00:00 +0000</lastBuildDate><atom:link href="https://example.org/tags/nodejs/index.xml" rel="self" type="application/rss+xml"/><item><title>TypeORM create方法的类型推断问题</title><link>https://example.org/post/typeorm-create-%E6%96%B9%E6%B3%95%E7%9A%84%E7%B1%BB%E5%9E%8B%E6%8E%A8%E6%96%AD%E9%97%AE%E9%A2%98/</link><pubDate>Mon, 02 Sep 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/typeorm-create-%E6%96%B9%E6%B3%95%E7%9A%84%E7%B1%BB%E5%9E%8B%E6%8E%A8%E6%96%AD%E9%97%AE%E9%A2%98/</guid><description>
+<![CDATA[<h1>TypeORM create方法的类型推断问题</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        
+          <h2 id="问题描述">
+<a class="header-anchor" href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0"></a>
+问题描述
+</h2><p>今天从AI那里复制了一段代码,逻辑看起来没有问题</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Injectable</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/common&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">InjectRepository</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@nestjs/typeorm&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Repository</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;typeorm&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">User</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./entities/user.entity&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">bcrypt</span> <span class="kr">from</span> <span class="s1">&#39;bcryptjs&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">@Injectable</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">class</span> <span class="nx">UserService</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">constructor</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">@InjectRepository</span><span class="p">(</span><span class="nx">User</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">private</span> <span class="nx">userRepository</span>: <span class="kt">Repository</span><span class="p">&lt;</span><span class="nt">User</span><span class="p">&gt;,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">async</span> <span class="nx">createUser</span><span class="p">(</span><span class="nx">userData</span>: <span class="kt">any</span><span class="p">)</span><span class="o">:</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">User</span><span class="p">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">hashedPassword</span> <span class="o">=</span> <span class="nx">bcrypt</span><span class="p">.</span><span class="nx">hashSync</span><span class="p">(</span><span class="nx">userData</span><span class="p">.</span><span class="nx">password</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">userRepository</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span> <span class="p">...</span><span class="nx">userData</span><span class="p">,</span> <span class="nx">password</span>: <span class="kt">hashedPassword</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">userRepository</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="nx">user</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>然而，VSCode 或 TypeScript 编译器可能会报错，提示 <code>create</code> 方法返回的是一个数组，而不是单个 <code>User</code> 对象。<strong>我人佛了</strong>传个对象，还给我推出数组来了。</p>
+        
+        <hr><p>本文2024-09-02首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-09-02</p>]]></description><category>nodejs</category></item></channel></rss>
