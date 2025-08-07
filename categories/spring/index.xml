@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Spring on Lotus</title><link>https://example.org/categories/spring/</link><description>Recent content from Lotus</description><generator>Hugo</generator><language>zh-cn</language><managingEditor>xxx@example.com (OliviaLotus)</managingEditor><webMaster>xxx@example.com (OliviaLotus)</webMaster><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Sat, 29 Jun 2024 08:00:00 +0000</lastBuildDate><atom:link href="https://example.org/categories/spring/index.xml" rel="self" type="application/rss+xml"/><item><title>spring国际化</title><link>https://example.org/post/spring%E5%9B%BD%E9%99%85%E5%8C%96/</link><pubDate>Sat, 29 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/spring%E5%9B%BD%E9%99%85%E5%8C%96/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Spring on Lotus</title><link>https://example.org/categories/spring/</link><description>Recent content from Lotus</description><generator>Hugo</generator><language>zh-cn</language><managingEditor>xxx@example.com (OliviaLotus)</managingEditor><webMaster>xxx@example.com (OliviaLotus)</webMaster><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Sat, 29 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/categories/spring/index.xml" rel="self" type="application/rss+xml"/><item><title>spring国际化</title><link>https://example.org/post/24-06-29-spring%E5%9B%BD%E9%99%85%E5%8C%96/</link><pubDate>Sat, 29 Jun 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/24-06-29-spring%E5%9B%BD%E9%99%85%E5%8C%96/</guid><description>
 <![CDATA[<h1>spring国际化</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <h3 id="0-实现代码">
@@ -34,7 +34,7 @@
   <tbody>
       <tr>
           <td>ApplicationContext 启动</td>
-          <td><code>AbstractApplicationContext#prepareBeanFactory</code> 注册单例<!-- raw HTML omitted --><code>beanFactory.registerResolvableDependency(MessageSource.class, context);</code></td>
+          <td><code>AbstractApplicationContext#prepareBeanFactory</code> 注册单例<br><code>beanFactory.registerResolvableDependency(MessageSource.class, context);</code></td>
       </tr>
       <tr>
           <td>Boot 自动装配</td>
@@ -42,7 +42,7 @@
       </tr>
       <tr>
           <td>业务侧</td>
-          <td>Hutool <code>SpringUtils.getBean(MessageSource.class)</code> 等价于<!-- raw HTML omitted --><code>applicationContext.getBean(MessageSource.class)</code></td>
+          <td>Hutool <code>SpringUtils.getBean(MessageSource.class)</code> 等价于<br><code>applicationContext.getBean(MessageSource.class)</code></td>
       </tr>
   </tbody>
 </table>
@@ -64,7 +64,7 @@
       </tr>
       <tr>
           <td>线程变量</td>
-          <td><code>LocaleContextHolder.getLocale()</code> →<!-- raw HTML omitted --><code>getLocaleContext().getLocale()</code></td>
+          <td><code>LocaleContextHolder.getLocale()</code> →<br><code>getLocaleContext().getLocale()</code></td>
       </tr>
   </tbody>
 </table>
@@ -169,7 +169,7 @@
 </ol>
 <p>源码紧接着：</p>
         
-        <hr><p>本文2024-06-29首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-29</p>]]></description><category>spring</category></item><item><title>springboot常用依赖</title><link>https://example.org/post/springboot%E5%B8%B8%E7%94%A8%E4%BE%9D%E8%B5%96/</link><pubDate>Sat, 29 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/springboot%E5%B8%B8%E7%94%A8%E4%BE%9D%E8%B5%96/</guid><description>
+        <hr><p>本文2024-06-29首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-29</p>]]></description><category>spring</category></item><item><title>springboot常用依赖</title><link>https://example.org/post/24-06-29-springboot%E5%B8%B8%E7%94%A8%E4%BE%9D%E8%B5%96/</link><pubDate>Sat, 29 Jun 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/24-06-29-springboot%E5%B8%B8%E7%94%A8%E4%BE%9D%E8%B5%96/</guid><description>
 <![CDATA[<h1>springboot常用依赖</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">

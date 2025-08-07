@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Javascript on Lotus</title><link>https://example.org/tags/javascript/</link><description>Recent content from Lotus</description><generator>Hugo</generator><language>zh-cn</language><managingEditor>xxx@example.com (OliviaLotus)</managingEditor><webMaster>xxx@example.com (OliviaLotus)</webMaster><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Thu, 03 Oct 2024 08:00:00 +0000</lastBuildDate><atom:link href="https://example.org/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>vue3 常用的几种组件通讯方式</title><link>https://example.org/post/vue3-%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E7%BB%84%E4%BB%B6%E9%80%9A%E8%AE%AF%E6%96%B9%E5%BC%8F/</link><pubDate>Thu, 03 Oct 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/vue3-%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E7%BB%84%E4%BB%B6%E9%80%9A%E8%AE%AF%E6%96%B9%E5%BC%8F/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Javascript on Lotus</title><link>https://example.org/tags/javascript/</link><description>Recent content from Lotus</description><generator>Hugo</generator><language>zh-cn</language><managingEditor>xxx@example.com (OliviaLotus)</managingEditor><webMaster>xxx@example.com (OliviaLotus)</webMaster><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Thu, 03 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>vue3 常用的几种组件通讯方式</title><link>https://example.org/post/24-10-03-vue3-%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E7%BB%84%E4%BB%B6%E9%80%9A%E8%AE%AF%E6%96%B9%E5%BC%8F/</link><pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/24-10-03-vue3-%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E7%BB%84%E4%BB%B6%E9%80%9A%E8%AE%AF%E6%96%B9%E5%BC%8F/</guid><description>
 <![CDATA[<h1>vue3 常用的几种组件通讯方式</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <h2 id="一父子组件通信">
@@ -31,7 +31,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p><strong>子组件：</strong></p>
         
-        <hr><p>本文2024-10-03首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-10-03</p>]]></description><category>vue</category></item><item><title>新建vue项目的最佳实践</title><link>https://example.org/post/%E6%96%B0%E5%BB%BAvue%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link><pubDate>Tue, 25 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/%E6%96%B0%E5%BB%BAvue%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid><description>
+        <hr><p>本文2024-10-03首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-10-03</p>]]></description><category>javascript</category></item><item><title>新建vue项目的最佳实践</title><link>https://example.org/post/24-08-25-%E6%96%B0%E5%BB%BAvue%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link><pubDate>Sun, 25 Aug 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/24-08-25-%E6%96%B0%E5%BB%BAvue%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid><description>
 <![CDATA[<h1>新建vue项目的最佳实践</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <h2 id="vite-初始化">
@@ -70,7 +70,7 @@ Vite 初始化
 </table>
 <p>之后执行：</p>
         
-        <hr><p>本文2024-06-25首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-25</p>]]></description><category>vue</category></item><item><title>Pure-Admin-http工具类解析</title><link>https://example.org/post/pure-admin-http%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%A7%A3%E6%9E%90/</link><pubDate>Wed, 19 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/pure-admin-http%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%A7%A3%E6%9E%90/</guid><description>
+        <hr><p>本文2024-08-25首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-08-25</p>]]></description><category>javascript</category></item><item><title>Pure-Admin-http工具类解析</title><link>https://example.org/post/24-08-19-pure-admin-http%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%A7%A3%E6%9E%90/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/24-08-19-pure-admin-http%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%A7%A3%E6%9E%90/</guid><description>
 <![CDATA[<h1>Pure-Admin-http工具类解析</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <h2 id="typesdts类型定义">
@@ -96,7 +96,35 @@ types.d.ts类型定义
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></div><p>这只是一个示例类型，表示接口返回的数据结构里可能有一个 <code>accessToken</code> 字段，实际项目里你可以换成你自己的。(删了也行)</p>
         
-        <hr><p>本文2024-06-19首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-19</p>]]></description><category>vue</category></item><item><title>TS泛型与符号速查</title><link>https://example.org/post/ts%E6%B3%9B%E5%9E%8B%E4%B8%8E%E7%AC%A6%E5%8F%B7%E9%80%9F%E6%9F%A5/</link><pubDate>Mon, 17 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/ts%E6%B3%9B%E5%9E%8B%E4%B8%8E%E7%AC%A6%E5%8F%B7%E9%80%9F%E6%9F%A5/</guid><description>
+        <hr><p>本文2024-08-19首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-08-19</p>]]></description><category>javascript</category></item><item><title>JS作用域链、闭包</title><link>https://example.org/post/24-08-17-js%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE%E9%97%AD%E5%8C%85/</link><pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/24-08-17-js%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE%E9%97%AD%E5%8C%85/</guid><description>
+<![CDATA[<h1>JS作用域链、闭包</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        
+          <h2 id="1-作用域链一层层抽屉找变量">
+<a class="header-anchor" href="#1-%e4%bd%9c%e7%94%a8%e5%9f%9f%e9%93%be%e4%b8%80%e5%b1%82%e5%b1%82%e6%8a%bd%e5%b1%89%e6%89%be%e5%8f%98%e9%87%8f"></a>
+1. 作用域链：一层层抽屉找变量
+</h2><h3 id="11-作用域scope">
+<a class="header-anchor" href="#11-%e4%bd%9c%e7%94%a8%e5%9f%9fscope"></a>
+1.1 作用域（Scope）
+</h3><p>作用域就是“变量能起作用的范围”。JS 只有三种作用域：</p>
+<ul>
+<li><strong>全局作用域</strong>：最外层抽屉，整个房间都能访问。</li>
+<li><strong>函数作用域</strong>：函数内部专属抽屉，函数外访问不到。</li>
+<li><strong>块级作用域</strong>（ES6）：<code>let/const</code> 一对大括号 <code>{}</code> 就是一个抽屉，比 <code>var</code> 更精细。</li>
+</ul>
+<h3 id="12-作用域链scope-chain">
+<a class="header-anchor" href="#12-%e4%bd%9c%e7%94%a8%e5%9f%9f%e9%93%bescope-chain"></a>
+1.2 作用域链（Scope Chain）
+</h3><p>当代码要取一个变量时，引擎会从<strong>当前抽屉</strong>开始一层层往外翻，直到全局抽屉为止，这条翻抽屉的路径就叫“作用域链”。</p>
+        
+        <hr><p>本文2024-08-17首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-08-17</p>]]></description><category>javascript</category></item><item><title>JS原型链</title><link>https://example.org/post/24-08-17-js%E5%8E%9F%E5%9E%8B%E9%93%BE/</link><pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/24-08-17-js%E5%8E%9F%E5%9E%8B%E9%93%BE/</guid><description>
+<![CDATA[<h1>JS原型链</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        
+          <h3 id="1-基本概念">
+<a class="header-anchor" href="#1-%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5"></a>
+1. 基本概念
+</h3><p>在 JavaScript 中，每个对象都有一个内部属性 <code>[[Prototype]]</code>，通常通过 <code>__proto__</code> 属性或者 <code>Object.getPrototypeOf()</code> 方法来访问。这个属性指向另一个对象，称为该对象的“原型”。如果在对象上查找某个属性或方法时，自身不存在，则会沿着原型链向上查找。</p>
+        
+        <hr><p>本文2024-08-17首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-08-17</p>]]></description><category>javascript</category></item><item><title>TS泛型与符号速查</title><link>https://example.org/post/24-06-17-ts%E6%B3%9B%E5%9E%8B%E4%B8%8E%E7%AC%A6%E5%8F%B7%E9%80%9F%E6%9F%A5/</link><pubDate>Mon, 17 Jun 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/24-06-17-ts%E6%B3%9B%E5%9E%8B%E4%B8%8E%E7%AC%A6%E5%8F%B7%E9%80%9F%E6%9F%A5/</guid><description>
 <![CDATA[<h1>TS泛型与符号速查</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <h3 id="1-占位符--默认值">
@@ -293,4 +321,4 @@ types.d.ts类型定义
   </tbody>
 </table>
         
-        <hr><p>本文2024-06-17首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-17</p>]]></description><category>vue</category></item></channel></rss>
+        <hr><p>本文2024-06-17首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-17</p>]]></description><category>javascript</category></item></channel></rss>

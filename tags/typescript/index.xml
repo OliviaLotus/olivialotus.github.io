@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Typescript on Lotus</title><link>https://example.org/tags/typescript/</link><description>Recent content from Lotus</description><generator>Hugo</generator><language>zh-cn</language><managingEditor>xxx@example.com (OliviaLotus)</managingEditor><webMaster>xxx@example.com (OliviaLotus)</webMaster><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Tue, 25 Jun 2024 08:00:00 +0000</lastBuildDate><atom:link href="https://example.org/tags/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>新建vue项目的最佳实践</title><link>https://example.org/post/%E6%96%B0%E5%BB%BAvue%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link><pubDate>Tue, 25 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/%E6%96%B0%E5%BB%BAvue%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Typescript on Lotus</title><link>https://example.org/tags/typescript/</link><description>Recent content from Lotus</description><generator>Hugo</generator><language>zh-cn</language><managingEditor>xxx@example.com (OliviaLotus)</managingEditor><webMaster>xxx@example.com (OliviaLotus)</webMaster><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Sun, 25 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/tags/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>新建vue项目的最佳实践</title><link>https://example.org/post/24-08-25-%E6%96%B0%E5%BB%BAvue%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link><pubDate>Sun, 25 Aug 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/24-08-25-%E6%96%B0%E5%BB%BAvue%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid><description>
 <![CDATA[<h1>新建vue项目的最佳实践</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <h2 id="vite-初始化">
@@ -37,7 +37,7 @@ Vite 初始化
 </table>
 <p>之后执行：</p>
         
-        <hr><p>本文2024-06-25首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-25</p>]]></description><category>vue</category></item><item><title>Pure-Admin-http工具类解析</title><link>https://example.org/post/pure-admin-http%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%A7%A3%E6%9E%90/</link><pubDate>Wed, 19 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/pure-admin-http%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%A7%A3%E6%9E%90/</guid><description>
+        <hr><p>本文2024-08-25首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-08-25</p>]]></description><category>javascript</category></item><item><title>Pure-Admin-http工具类解析</title><link>https://example.org/post/24-08-19-pure-admin-http%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%A7%A3%E6%9E%90/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/24-08-19-pure-admin-http%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%A7%A3%E6%9E%90/</guid><description>
 <![CDATA[<h1>Pure-Admin-http工具类解析</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <h2 id="typesdts类型定义">
@@ -63,7 +63,7 @@ types.d.ts类型定义
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></div><p>这只是一个示例类型，表示接口返回的数据结构里可能有一个 <code>accessToken</code> 字段，实际项目里你可以换成你自己的。(删了也行)</p>
         
-        <hr><p>本文2024-06-19首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-19</p>]]></description><category>vue</category></item><item><title>TS泛型与符号速查</title><link>https://example.org/post/ts%E6%B3%9B%E5%9E%8B%E4%B8%8E%E7%AC%A6%E5%8F%B7%E9%80%9F%E6%9F%A5/</link><pubDate>Mon, 17 Jun 2024 08:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/ts%E6%B3%9B%E5%9E%8B%E4%B8%8E%E7%AC%A6%E5%8F%B7%E9%80%9F%E6%9F%A5/</guid><description>
+        <hr><p>本文2024-08-19首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-08-19</p>]]></description><category>javascript</category></item><item><title>TS泛型与符号速查</title><link>https://example.org/post/24-06-17-ts%E6%B3%9B%E5%9E%8B%E4%B8%8E%E7%AC%A6%E5%8F%B7%E9%80%9F%E6%9F%A5/</link><pubDate>Mon, 17 Jun 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/24-06-17-ts%E6%B3%9B%E5%9E%8B%E4%B8%8E%E7%AC%A6%E5%8F%B7%E9%80%9F%E6%9F%A5/</guid><description>
 <![CDATA[<h1>TS泛型与符号速查</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <h3 id="1-占位符--默认值">
@@ -260,4 +260,4 @@ types.d.ts类型定义
   </tbody>
 </table>
         
-        <hr><p>本文2024-06-17首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-17</p>]]></description><category>vue</category></item></channel></rss>
+        <hr><p>本文2024-06-17首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-06-17</p>]]></description><category>javascript</category></item></channel></rss>
