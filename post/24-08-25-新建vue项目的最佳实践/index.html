@@ -34,6 +34,7 @@
 </span></span><span class=line><span class=cl><span class=cm>/** @type {import(&#39;postcss-load-config&#39;).Config} */</span>
 </span></span><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>  <span class=nx>plugins</span><span class=o>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>autoprefixer</span><span class=o>:</span> <span class=p>{},</span>
 </span></span><span class=line><span class=cl>    <span class=p>...(</span><span class=nx>process</span><span class=p>.</span><span class=nx>env</span><span class=p>.</span><span class=nx>NODE_ENV</span> <span class=o>===</span> <span class=s2>&#34;production&#34;</span> <span class=o>?</span> <span class=p>{</span> <span class=nx>cssnano</span><span class=o>:</span> <span class=p>{}</span> <span class=p>}</span> <span class=o>:</span> <span class=p>{}),</span>
 </span></span><span class=line><span class=cl>  <span class=p>},</span>
 </span></span><span class=line><span class=cl><span class=p>};</span>
@@ -113,7 +114,6 @@
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=kr>import</span> <span class=p>{</span> <span class=nx>defineConfig</span> <span class=p>}</span> <span class=kr>from</span> <span class=s2>&#34;vite&#34;</span><span class=p>;</span>
 </span></span><span class=line><span class=cl><span class=kr>import</span> <span class=nx>vue</span> <span class=kr>from</span> <span class=s2>&#34;@vitejs/plugin-vue&#34;</span><span class=p>;</span>
-</span></span><span class=line><span class=cl><span class=kr>import</span> <span class=nx>vueDevTools</span> <span class=kr>from</span> <span class=s2>&#34;vite-plugin-vue-devtools&#34;</span><span class=p>;</span>
 </span></span><span class=line><span class=cl><span class=kr>import</span> <span class=nx>Icons</span> <span class=kr>from</span> <span class=s2>&#34;unplugin-icons/vite&#34;</span><span class=p>;</span>
 </span></span><span class=line><span class=cl><span class=kr>import</span> <span class=nx>visualizer</span> <span class=kr>from</span> <span class=s2>&#34;rollup-plugin-visualizer&#34;</span><span class=p>;</span>
 </span></span><span class=line><span class=cl><span class=kr>import</span> <span class=nx>viteCompression</span> <span class=kr>from</span> <span class=s2>&#34;vite-plugin-compression&#34;</span><span class=p>;</span>
@@ -121,13 +121,12 @@
 </span></span><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=nx>defineConfig</span><span class=p>({</span>
 </span></span><span class=line><span class=cl>  <span class=nx>plugins</span><span class=o>:</span> <span class=p>[</span>
 </span></span><span class=line><span class=cl>    <span class=nx>vue</span><span class=p>(),</span>
-</span></span><span class=line><span class=cl>    <span class=nx>vueDevTools</span><span class=p>(),</span>
 </span></span><span class=line><span class=cl>    <span class=nx>Icons</span><span class=p>({</span>
 </span></span><span class=line><span class=cl>      <span class=nx>compiler</span><span class=o>:</span> <span class=s2>&#34;vue3&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>    <span class=p>}),</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=nx>process</span><span class=p>.</span><span class=nx>env</span><span class=p>.</span><span class=nx>npm_lifecycle_event</span> <span class=o>===</span> <span class=s2>&#34;report&#34;</span>
-</span></span><span class=line><span class=cl>      <span class=o>?</span> <span class=nx>visualizer</span><span class=p>({</span> <span class=nx>open</span>: <span class=kt>true</span><span class=p>,</span> <span class=nx>brotliSize</span>: <span class=kt>true</span><span class=p>,</span> <span class=nx>filename</span><span class=o>:</span> <span class=s2>&#34;report.html&#34;</span> <span class=p>})</span>
+</span></span><span class=line><span class=cl>      <span class=o>?</span> <span class=nx>visualizer</span><span class=p>({</span> <span class=nx>open</span>: <span class=kt>true</span><span class=p>,</span> <span class=nx>gzipSize</span>: <span class=kt>true</span><span class=p>,</span> <span class=nx>filename</span><span class=o>:</span> <span class=s2>&#34;report.html&#34;</span> <span class=p>})</span>
 </span></span><span class=line><span class=cl>      <span class=o>:</span> <span class=p>(</span><span class=kc>null</span> <span class=kr>as</span> <span class=kt>any</span><span class=p>),</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=nx>process</span><span class=p>.</span><span class=nx>env</span><span class=p>.</span><span class=nx>NODE_ENV</span> <span class=o>===</span> <span class=s2>&#34;production&#34;</span>

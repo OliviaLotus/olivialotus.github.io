@@ -30,31 +30,14 @@ VSCode检测Java环境
         <hr><p>本文2025-05-29首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-05-29</p>]]></description><category>java</category></item><item><title>从java入门编程(1)-配置环境</title><link>https://example.org/post/25-04-20-%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</link><pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-04-20-%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</guid><description>
 <![CDATA[<h1>从java入门编程(1)-配置环境</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
-          <h3 id="按难度筛选">
-<a class="header-anchor" href="#%e6%8c%89%e9%9a%be%e5%ba%a6%e7%ad%9b%e9%80%89"></a>
-按难度筛选
-</h3><select id="level-filter">
-  <option value="all">全部</option>
-  <option value="easy">简单</option>
-  <option value="hard">困难</option>
-</select>
-<ul id="list">
-  <li data-level="easy">任务 A</li>
-  <li data-level="hard">任务 B</li>
-  <li data-level="easy">任务 C</li>
-</ul>
-<script>
-document.getElementById('level-filter').addEventListener('change', e => {
-  const v = e.target.value;
-  document.querySelectorAll('#list li').forEach(li =>
-    li.style.display = (v === 'all' || li.dataset.level === v) ? '' : 'none'
-  );
-});
-</script>
-<h2 id="配置java环境">
+          <h2 id="配置java环境">
 <a class="header-anchor" href="#%e9%85%8d%e7%bd%aejava%e7%8e%af%e5%a2%83"></a>
 配置java环境
 </h2><p>jdk有很多版本,对教学来说区别甚微</p>
+<p>以<strong>openjdk17</strong>作为java环境</p>
+<p>从<a href="https://mirrors.tuna.tsinghua.edu.cn/Adoptium/17/jdk/x64/windows/">清华源镜像</a>下载jdk
+<img src="/post/25-04-20-%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/2025-05-27-21-22-44.png" alt="">
+将下载的zip解压,我喜欢用一个目录专门存放开发环境和工具</p>
         
         <hr><p>本文2025-04-20首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-04-20</p>]]></description><category>java</category></item><item><title>java基础学生管理系统</title><link>https://example.org/post/25-04-19-%E5%AD%A6java%E5%9F%BA%E7%A1%80%E6%97%B6%E9%9A%BE%E5%A6%82%E7%99%BB%E5%A4%A9%E7%9A%84%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</link><pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-04-19-%E5%AD%A6java%E5%9F%BA%E7%A1%80%E6%97%B6%E9%9A%BE%E5%A6%82%E7%99%BB%E5%A4%A9%E7%9A%84%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</guid><description>
 <![CDATA[<h1>java基础学生管理系统</h1><p>作者：OliviaLotus（xxx@example.com）</p>
@@ -103,7 +86,7 @@ document.getElementById('level-filter').addEventListener('change', e => {
   <tbody>
       <tr>
           <td>ApplicationContext 启动</td>
-          <td><code>AbstractApplicationContext#prepareBeanFactory</code> 注册单例<br><code>beanFactory.registerResolvableDependency(MessageSource.class, context);</code></td>
+          <td><code>AbstractApplicationContext#prepareBeanFactory</code> 注册单例<!-- raw HTML omitted --><code>beanFactory.registerResolvableDependency(MessageSource.class, context);</code></td>
       </tr>
       <tr>
           <td>Boot 自动装配</td>
@@ -111,7 +94,7 @@ document.getElementById('level-filter').addEventListener('change', e => {
       </tr>
       <tr>
           <td>业务侧</td>
-          <td>Hutool <code>SpringUtils.getBean(MessageSource.class)</code> 等价于<br><code>applicationContext.getBean(MessageSource.class)</code></td>
+          <td>Hutool <code>SpringUtils.getBean(MessageSource.class)</code> 等价于<!-- raw HTML omitted --><code>applicationContext.getBean(MessageSource.class)</code></td>
       </tr>
   </tbody>
 </table>
@@ -133,7 +116,7 @@ document.getElementById('level-filter').addEventListener('change', e => {
       </tr>
       <tr>
           <td>线程变量</td>
-          <td><code>LocaleContextHolder.getLocale()</code> →<br><code>getLocaleContext().getLocale()</code></td>
+          <td><code>LocaleContextHolder.getLocale()</code> →<!-- raw HTML omitted --><code>getLocaleContext().getLocale()</code></td>
       </tr>
   </tbody>
 </table>

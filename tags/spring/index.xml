@@ -34,7 +34,7 @@
   <tbody>
       <tr>
           <td>ApplicationContext 启动</td>
-          <td><code>AbstractApplicationContext#prepareBeanFactory</code> 注册单例<br><code>beanFactory.registerResolvableDependency(MessageSource.class, context);</code></td>
+          <td><code>AbstractApplicationContext#prepareBeanFactory</code> 注册单例<!-- raw HTML omitted --><code>beanFactory.registerResolvableDependency(MessageSource.class, context);</code></td>
       </tr>
       <tr>
           <td>Boot 自动装配</td>
@@ -42,7 +42,7 @@
       </tr>
       <tr>
           <td>业务侧</td>
-          <td>Hutool <code>SpringUtils.getBean(MessageSource.class)</code> 等价于<br><code>applicationContext.getBean(MessageSource.class)</code></td>
+          <td>Hutool <code>SpringUtils.getBean(MessageSource.class)</code> 等价于<!-- raw HTML omitted --><code>applicationContext.getBean(MessageSource.class)</code></td>
       </tr>
   </tbody>
 </table>
@@ -64,7 +64,7 @@
       </tr>
       <tr>
           <td>线程变量</td>
-          <td><code>LocaleContextHolder.getLocale()</code> →<br><code>getLocaleContext().getLocale()</code></td>
+          <td><code>LocaleContextHolder.getLocale()</code> →<!-- raw HTML omitted --><code>getLocaleContext().getLocale()</code></td>
       </tr>
   </tbody>
 </table>
