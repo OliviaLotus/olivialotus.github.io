@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Lotus</title><link>https://example.org/categories/java/</link><description>Recent content from Lotus</description><generator>Hugo</generator><language>zh-cn</language><managingEditor>xxx@example.com (OliviaLotus)</managingEditor><webMaster>xxx@example.com (OliviaLotus)</webMaster><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Sun, 01 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/categories/java/index.xml" rel="self" type="application/rss+xml"/><item><title>从java入门编程(3)-变量与数据类型</title><link>https://example.org/post/25-06-01-%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B3-%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B3-%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link><pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-06-01-%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B3-%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B3-%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid><description>
-<![CDATA[<h1>从java入门编程(3)-变量与数据类型</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Lotus</title><link>https://example.org/categories/java/</link><description>Recent content from Lotus</description><generator>Hugo</generator><language>zh-cn</language><managingEditor>xxx@example.com (OliviaLotus)</managingEditor><webMaster>xxx@example.com (OliviaLotus)</webMaster><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Sun, 01 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/categories/java/index.xml" rel="self" type="application/rss+xml"/><item><title>java教程(3)-变量与数据类型</title><link>https://example.org/post/25-06-01-java%E6%95%99%E7%A8%8B3-%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B3-%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link><pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-06-01-java%E6%95%99%E7%A8%8B3-%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B3-%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid><description>
+<![CDATA[<h1>java教程(3)-变量与数据类型</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <h2 id="解释代码">
 <a class="header-anchor" href="#%e8%a7%a3%e9%87%8a%e4%bb%a3%e7%a0%81"></a>
@@ -13,31 +13,32 @@
 <p>循序渐进即可.</p>
 <p>我们重点关注这行代码:<strong><code>System.out.println(&quot;Hello, World!&quot;);</code></strong></p>
         
-        <hr><p>本文2025-06-01首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-06-01</p>]]></description><category>java</category></item><item><title>从java入门编程(2)-程序执行流程</title><link>https://example.org/post/25-05-29-%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B2-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link><pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-05-29-%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B2-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</guid><description>
-<![CDATA[<h1>从java入门编程(2)-程序执行流程</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        <hr><p>本文2025-06-01首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-06-01</p>]]></description><category>java</category></item><item><title>java教程(2)-程序执行流程</title><link>https://example.org/post/25-05-29-java%E6%95%99%E7%A8%8B2-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</link><pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-05-29-java%E6%95%99%E7%A8%8B2-%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/</guid><description>
+<![CDATA[<h1>java教程(2)-程序执行流程</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <h2 id="运行流程">
 <a class="header-anchor" href="#%e8%bf%90%e8%a1%8c%e6%b5%81%e7%a8%8b"></a>
 运行流程
-</h2><p>下面的内容有些词听不懂没关系,只要明白是一些jdk文件夹里的程序在起作用即可.
+</h2><p>下面的内容有些词听不懂没关系,只要明白是一些 jdk 文件夹里的程序在起作用即可.
 当我们点击右上角的小三角后</p>
-<h3 id="vscode检测java环境">
-<a class="header-anchor" href="#vscode%e6%a3%80%e6%b5%8bjava%e7%8e%af%e5%a2%83"></a>
-VSCode检测Java环境
-</h3><p>VSCode 会通过配置的 JDK 环境变量来确认 Java 开发环境是否可用。也就是vscode会优先从系统变量里找<code>javahome</code>(大小写无所谓)变量,但是我们并没有配置,先前只是配置path变量里的可执行文件路径而已,所以我们手动在vscode的设置里配置了<code>javahome</code>的路径.
+<h3 id="vscode-检测-java-环境">
+<a class="header-anchor" href="#vscode-%e6%a3%80%e6%b5%8b-java-%e7%8e%af%e5%a2%83"></a>
+VSCode 检测 Java 环境
+</h3><p>VSCode 会通过配置的 JDK 环境变量来确认 Java 开发环境是否可用。也就是 vscode 会优先从系统变量里找<code>javahome</code>(大小写无所谓)变量,但是我们并没有配置,先前只是配置 path 变量里的可执行文件路径而已,所以我们手动在 vscode 的设置里配置了<code>javahome</code>的路径.
 如果环境变量配置有问题，VSCode 会提示你重新配置 JDK 路径。(也就是报错)</p>
         
-        <hr><p>本文2025-05-29首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-05-29</p>]]></description><category>java</category></item><item><title>从java入门编程(1)-配置环境</title><link>https://example.org/post/25-04-20-%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</link><pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-04-20-%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</guid><description>
-<![CDATA[<h1>从java入门编程(1)-配置环境</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        <hr><p>本文2025-05-29首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-05-29</p>]]></description><category>java</category></item><item><title>java教程(1)-配置环境</title><link>https://example.org/post/25-04-20-java%E6%95%99%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</link><pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-04-20-java%E6%95%99%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</guid><description>
+<![CDATA[<h1>java教程(1)-配置环境</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
-          <h2 id="配置java环境">
-<a class="header-anchor" href="#%e9%85%8d%e7%bd%aejava%e7%8e%af%e5%a2%83"></a>
-配置java环境
-</h2><p>jdk有很多版本,对教学来说区别甚微</p>
-<p>以<strong>openjdk17</strong>作为java环境</p>
-<p>从<a href="https://mirrors.tuna.tsinghua.edu.cn/Adoptium/17/jdk/x64/windows/">清华源镜像</a>下载jdk
-<img src="/post/25-04-20-%E4%BB%8Ejava%E5%85%A5%E9%97%A8%E7%BC%96%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/2025-05-27-21-22-44.png" alt="">
-将下载的zip解压,我喜欢用一个目录专门存放开发环境和工具</p>
+          <h2 id="配置-java-环境">
+<a class="header-anchor" href="#%e9%85%8d%e7%bd%ae-java-%e7%8e%af%e5%a2%83"></a>
+配置 java 环境
+</h2><p>jdk 有很多版本,对教学来说区别甚微</p>
+<p>以<strong>openjdk17</strong>作为 java 环境</p>
+<p>从<a href="https://mirrors.tuna.tsinghua.edu.cn/Adoptium/17/jdk/x64/windows/">清华源镜像</a>下载 jdk
+<img src="/post/25-04-20-java%E6%95%99%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/2025-05-27-21-22-44.png" alt="">
+将下载的 zip 解压,我喜欢用一个目录专门存放开发环境和工具</p>
+<p><strong>电脑小白可以去看下<a href="https://www.bilibili.com/video/BV1VV4y1U7Kn/?spm_id_from=333.337.search-card.all.click&amp;vd_source=1e6d81bbe21aa9ec935a4fe907b05d20">windows 教程</a></strong></p>
         
         <hr><p>本文2025-04-20首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-04-20</p>]]></description><category>java</category></item><item><title>java基础学生管理系统</title><link>https://example.org/post/25-04-19-%E5%AD%A6java%E5%9F%BA%E7%A1%80%E6%97%B6%E9%9A%BE%E5%A6%82%E7%99%BB%E5%A4%A9%E7%9A%84%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</link><pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-04-19-%E5%AD%A6java%E5%9F%BA%E7%A1%80%E6%97%B6%E9%9A%BE%E5%A6%82%E7%99%BB%E5%A4%A9%E7%9A%84%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</guid><description>
 <![CDATA[<h1>java基础学生管理系统</h1><p>作者：OliviaLotus（xxx@example.com）</p>
