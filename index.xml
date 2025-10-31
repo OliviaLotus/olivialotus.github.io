@@ -40,7 +40,16 @@ VSCode 检测 Java 环境
 将下载的 zip 解压,我喜欢用一个目录专门存放开发环境和工具</p>
 <p><strong>电脑小白可以去看下<a href="https://www.bilibili.com/video/BV1VV4y1U7Kn/?spm_id_from=333.337.search-card.all.click&amp;vd_source=1e6d81bbe21aa9ec935a4fe907b05d20">windows 教程</a></strong></p>
         
-        <hr><p>本文2025-04-20首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-04-20</p>]]></description><category>java</category></item><item><title>java基础学生管理系统</title><link>https://example.org/post/25-04-19-%E5%AD%A6java%E5%9F%BA%E7%A1%80%E6%97%B6%E9%9A%BE%E5%A6%82%E7%99%BB%E5%A4%A9%E7%9A%84%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</link><pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-04-19-%E5%AD%A6java%E5%9F%BA%E7%A1%80%E6%97%B6%E9%9A%BE%E5%A6%82%E7%99%BB%E5%A4%A9%E7%9A%84%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</guid><description>
+        <hr><p>本文2025-04-20首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-04-20</p>]]></description><category>java</category></item><item><title>Vant自动引入样式的坑</title><link>https://example.org/post/25-04-19-vant%E8%87%AA%E5%8A%A8%E5%BC%95%E5%85%A5%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%9D%91/vant%E8%87%AA%E5%8A%A8%E5%BC%95%E5%85%A5%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%9D%91/</link><pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-04-19-vant%E8%87%AA%E5%8A%A8%E5%BC%95%E5%85%A5%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%9D%91/vant%E8%87%AA%E5%8A%A8%E5%BC%95%E5%85%A5%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%9D%91/</guid><description>
+<![CDATA[<h1>Vant自动引入样式的坑</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        
+          <h3 id="前言">
+<a class="header-anchor" href="#%e5%89%8d%e8%a8%80"></a>
+前言
+</h3><p>“按照官方文档配置了
+<code>unplugin-vue-components</code> + <code>@vant/auto-import-resolver</code>，组件都能正常渲染，可一调用 <code>showFailToast('失败')</code>，弹出来的 Toast 只有文字，没有样式”</p>
+        
+        <hr><p>本文2025-04-19首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-04-19</p>]]></description><category>javascript</category></item><item><title>java基础学生管理系统</title><link>https://example.org/post/25-04-19-%E5%AD%A6java%E5%9F%BA%E7%A1%80%E6%97%B6%E9%9A%BE%E5%A6%82%E7%99%BB%E5%A4%A9%E7%9A%84%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</link><pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-04-19-%E5%AD%A6java%E5%9F%BA%E7%A1%80%E6%97%B6%E9%9A%BE%E5%A6%82%E7%99%BB%E5%A4%A9%E7%9A%84%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</guid><description>
 <![CDATA[<h1>java基础学生管理系统</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <blockquote>
@@ -188,13 +197,5 @@ types.d.ts类型定义
 <a class="header-anchor" href="#12-%e4%bd%9c%e7%94%a8%e5%9f%9f%e9%93%bescope-chain"></a>
 1.2 作用域链（Scope Chain）
 </h3><p>当代码要取一个变量时，引擎会从<strong>当前抽屉</strong>开始一层层往外翻，直到全局抽屉为止，这条翻抽屉的路径就叫“作用域链”。</p>
-        
-        <hr><p>本文2024-08-17首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-08-17</p>]]></description><category>javascript</category></item><item><title>JS原型链</title><link>https://example.org/post/24-08-17-js%E5%8E%9F%E5%9E%8B%E9%93%BE/</link><pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/24-08-17-js%E5%8E%9F%E5%9E%8B%E9%93%BE/</guid><description>
-<![CDATA[<h1>JS原型链</h1><p>作者：OliviaLotus（xxx@example.com）</p>
-        
-          <h3 id="1-基本概念">
-<a class="header-anchor" href="#1-%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5"></a>
-1. 基本概念
-</h3><p>在 JavaScript 中，每个对象都有一个内部属性 <code>[[Prototype]]</code>，通常通过 <code>__proto__</code> 属性或者 <code>Object.getPrototypeOf()</code> 方法来访问。这个属性指向另一个对象，称为该对象的“原型”。如果在对象上查找某个属性或方法时，自身不存在，则会沿着原型链向上查找。</p>
         
         <hr><p>本文2024-08-17首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-08-17</p>]]></description><category>javascript</category></item></channel></rss>
