@@ -27,7 +27,36 @@ VSCode 检测 Java 环境
 </h3><p>VSCode 会通过配置的 JDK 环境变量来确认 Java 开发环境是否可用。也就是 vscode 会优先从系统变量里找<code>javahome</code>(大小写无所谓)变量,但是我们并没有配置,先前只是配置 path 变量里的可执行文件路径而已,所以我们手动在 vscode 的设置里配置了<code>javahome</code>的路径.
 如果环境变量配置有问题，VSCode 会提示你重新配置 JDK 路径。(也就是报错)</p>
         
-        <hr><p>本文2025-05-29首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-05-29</p>]]></description><category>java</category></item><item><title>java教程(1)-配置环境</title><link>https://example.org/post/25-04-20-java%E6%95%99%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</link><pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-04-20-java%E6%95%99%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</guid><description>
+        <hr><p>本文2025-05-29首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-05-29</p>]]></description><category>java</category></item><item><title>Vant-Toast 样式失效(被覆盖)</title><link>https://example.org/post/25-05-04-vant-toast-%E6%A0%B7%E5%BC%8F%E5%A4%B1%E6%95%88%E8%A2%AB%E8%A6%86%E7%9B%96/</link><pubDate>Sun, 04 May 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-05-04-vant-toast-%E6%A0%B7%E5%BC%8F%E5%A4%B1%E6%95%88%E8%A2%AB%E8%A6%86%E7%9B%96/</guid><description>
+<![CDATA[<h1>Vant-Toast 样式失效(被覆盖)</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        
+          <h2 id="1-toast-样式全白">
+<a class="header-anchor" href="#1-toast-%e6%a0%b7%e5%bc%8f%e5%85%a8%e7%99%bd"></a>
+1. Toast 样式全白
+</h2><p>项目里 <strong>别的页面正常</strong>，唯独 <code>某一个</code> 弹出的 Toast 是 <strong>白背景 + 白色图标</strong> ，还以为是渲染失败。</p>
+<hr>
+<h2 id="2-排查过程">
+<a class="header-anchor" href="#2-%e6%8e%92%e6%9f%a5%e8%bf%87%e7%a8%8b"></a>
+2. 排查过程
+</h2><ol>
+<li>控制台 DOM 已生成，但 <code>background: var(--van-toast-background);</code> 被覆盖</li>
+<li>全局搜 CSS 没有任何一行手写 <code>.van-popup { background:#fff }</code></li>
+<li>删光文件 <code>&lt;style&gt;</code> 依旧白底,并且发现<code>.van-popup:var(--van-popup-background);</code></li>
+<li>计算样式对比正常页面发现多了一个样式文件 vant/es/popup/index.css</li>
+<li>ide 全局搜索发现这个文件设置的<code>background</code>为白色</li>
+<li>搜索发现是因为有页面用了<code>&lt;van-popup&gt;</code>标签,并且由于<code>unplugin-vue-components</code>插件会自动引入样式导致样式冲突</li>
+<li>设置插件参数</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="line"><span class="cl">   <span class="nx">Components</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">resolvers</span><span class="o">:</span> <span class="p">[</span><span class="nx">VantResolver</span><span class="p">({</span> <span class="nx">importStyle</span><span class="o">:</span> <span class="kc">false</span> <span class="p">})],</span>
+</span></span><span class="line"><span class="cl">      <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//vant/es/popup/index.css没了,样式正常
+</span></span></span></code></pre></div><h2 id="3-根因两份-css-冲突">
+<a class="header-anchor" href="#3-%e6%a0%b9%e5%9b%a0%e4%b8%a4%e4%bb%bd-css-%e5%86%b2%e7%aa%81"></a>
+3. 根因：两份 CSS 冲突
+</h2><p><strong>Vant 源文件链路(伪代码)：</strong></p>
+        
+        <hr><p>本文2025-05-04首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-05-04</p>]]></description><category>javascript</category></item><item><title>java教程(1)-配置环境</title><link>https://example.org/post/25-04-20-java%E6%95%99%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</link><pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-04-20-java%E6%95%99%E7%A8%8B1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</guid><description>
 <![CDATA[<h1>java教程(1)-配置环境</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <h2 id="配置-java-环境">
@@ -178,24 +207,4 @@ types.d.ts类型定义
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></div><p>这只是一个示例类型，表示接口返回的数据结构里可能有一个 <code>accessToken</code> 字段，实际项目里你可以换成你自己的。(删了也行)</p>
         
-        <hr><p>本文2024-08-19首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-08-19</p>]]></description><category>javascript</category></item><item><title>JS作用域链、闭包</title><link>https://example.org/post/24-08-17-js%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE%E9%97%AD%E5%8C%85/</link><pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/24-08-17-js%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE%E9%97%AD%E5%8C%85/</guid><description>
-<![CDATA[<h1>JS作用域链、闭包</h1><p>作者：OliviaLotus（xxx@example.com）</p>
-        
-          <h2 id="1-作用域链一层层抽屉找变量">
-<a class="header-anchor" href="#1-%e4%bd%9c%e7%94%a8%e5%9f%9f%e9%93%be%e4%b8%80%e5%b1%82%e5%b1%82%e6%8a%bd%e5%b1%89%e6%89%be%e5%8f%98%e9%87%8f"></a>
-1. 作用域链：一层层抽屉找变量
-</h2><h3 id="11-作用域scope">
-<a class="header-anchor" href="#11-%e4%bd%9c%e7%94%a8%e5%9f%9fscope"></a>
-1.1 作用域（Scope）
-</h3><p>作用域就是“变量能起作用的范围”。JS 只有三种作用域：</p>
-<ul>
-<li><strong>全局作用域</strong>：最外层抽屉，整个房间都能访问。</li>
-<li><strong>函数作用域</strong>：函数内部专属抽屉，函数外访问不到。</li>
-<li><strong>块级作用域</strong>（ES6）：<code>let/const</code> 一对大括号 <code>{}</code> 就是一个抽屉，比 <code>var</code> 更精细。</li>
-</ul>
-<h3 id="12-作用域链scope-chain">
-<a class="header-anchor" href="#12-%e4%bd%9c%e7%94%a8%e5%9f%9f%e9%93%bescope-chain"></a>
-1.2 作用域链（Scope Chain）
-</h3><p>当代码要取一个变量时，引擎会从<strong>当前抽屉</strong>开始一层层往外翻，直到全局抽屉为止，这条翻抽屉的路径就叫“作用域链”。</p>
-        
-        <hr><p>本文2024-08-17首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-08-17</p>]]></description><category>javascript</category></item></channel></rss>
+        <hr><p>本文2024-08-19首发于<a href='https://example.org/'>Lotus</a>，最后修改于2024-08-19</p>]]></description><category>javascript</category></item></channel></rss>

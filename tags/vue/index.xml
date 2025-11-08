@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vue on Lotus</title><link>https://example.org/tags/vue/</link><description>Recent content from Lotus</description><generator>Hugo</generator><language>zh-cn</language><managingEditor>xxx@example.com (OliviaLotus)</managingEditor><webMaster>xxx@example.com (OliviaLotus)</webMaster><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Sat, 19 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/tags/vue/index.xml" rel="self" type="application/rss+xml"/><item><title>Vant自动引入样式的坑</title><link>https://example.org/post/25-04-19-vant%E8%87%AA%E5%8A%A8%E5%BC%95%E5%85%A5%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%9D%91/vant%E8%87%AA%E5%8A%A8%E5%BC%95%E5%85%A5%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%9D%91/</link><pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-04-19-vant%E8%87%AA%E5%8A%A8%E5%BC%95%E5%85%A5%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%9D%91/vant%E8%87%AA%E5%8A%A8%E5%BC%95%E5%85%A5%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%9D%91/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vue on Lotus</title><link>https://example.org/tags/vue/</link><description>Recent content from Lotus</description><generator>Hugo</generator><language>zh-cn</language><managingEditor>xxx@example.com (OliviaLotus)</managingEditor><webMaster>xxx@example.com (OliviaLotus)</webMaster><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Sun, 04 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/tags/vue/index.xml" rel="self" type="application/rss+xml"/><item><title>Vant-Toast 样式失效(被覆盖)</title><link>https://example.org/post/25-05-04-vant-toast-%E6%A0%B7%E5%BC%8F%E5%A4%B1%E6%95%88%E8%A2%AB%E8%A6%86%E7%9B%96/</link><pubDate>Sun, 04 May 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-05-04-vant-toast-%E6%A0%B7%E5%BC%8F%E5%A4%B1%E6%95%88%E8%A2%AB%E8%A6%86%E7%9B%96/</guid><description>
+<![CDATA[<h1>Vant-Toast 样式失效(被覆盖)</h1><p>作者：OliviaLotus（xxx@example.com）</p>
+        
+          <h2 id="1-toast-样式全白">
+<a class="header-anchor" href="#1-toast-%e6%a0%b7%e5%bc%8f%e5%85%a8%e7%99%bd"></a>
+1. Toast 样式全白
+</h2><p>项目里 <strong>别的页面正常</strong>，唯独 <code>某一个</code> 弹出的 Toast 是 <strong>白背景 + 白色图标</strong> ，还以为是渲染失败。</p>
+<hr>
+<h2 id="2-排查过程">
+<a class="header-anchor" href="#2-%e6%8e%92%e6%9f%a5%e8%bf%87%e7%a8%8b"></a>
+2. 排查过程
+</h2><ol>
+<li>控制台 DOM 已生成，但 <code>background: var(--van-toast-background);</code> 被覆盖</li>
+<li>全局搜 CSS 没有任何一行手写 <code>.van-popup { background:#fff }</code></li>
+<li>删光文件 <code>&lt;style&gt;</code> 依旧白底,并且发现<code>.van-popup:var(--van-popup-background);</code></li>
+<li>计算样式对比正常页面发现多了一个样式文件 vant/es/popup/index.css</li>
+<li>ide 全局搜索发现这个文件设置的<code>background</code>为白色</li>
+<li>搜索发现是因为有页面用了<code>&lt;van-popup&gt;</code>标签,并且由于<code>unplugin-vue-components</code>插件会自动引入样式导致样式冲突</li>
+<li>设置插件参数</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="line"><span class="cl">   <span class="nx">Components</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">resolvers</span><span class="o">:</span> <span class="p">[</span><span class="nx">VantResolver</span><span class="p">({</span> <span class="nx">importStyle</span><span class="o">:</span> <span class="kc">false</span> <span class="p">})],</span>
+</span></span><span class="line"><span class="cl">      <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//vant/es/popup/index.css没了,样式正常
+</span></span></span></code></pre></div><h2 id="3-根因两份-css-冲突">
+<a class="header-anchor" href="#3-%e6%a0%b9%e5%9b%a0%e4%b8%a4%e4%bb%bd-css-%e5%86%b2%e7%aa%81"></a>
+3. 根因：两份 CSS 冲突
+</h2><p><strong>Vant 源文件链路(伪代码)：</strong></p>
+        
+        <hr><p>本文2025-05-04首发于<a href='https://example.org/'>Lotus</a>，最后修改于2025-05-04</p>]]></description><category>javascript</category></item><item><title>Vant自动引入样式的坑</title><link>https://example.org/post/25-04-19-vant%E8%87%AA%E5%8A%A8%E5%BC%95%E5%85%A5%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%9D%91/vant%E8%87%AA%E5%8A%A8%E5%BC%95%E5%85%A5%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%9D%91/</link><pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate><author>xxx@example.com (OliviaLotus)</author><guid>https://example.org/post/25-04-19-vant%E8%87%AA%E5%8A%A8%E5%BC%95%E5%85%A5%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%9D%91/vant%E8%87%AA%E5%8A%A8%E5%BC%95%E5%85%A5%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%9D%91/</guid><description>
 <![CDATA[<h1>Vant自动引入样式的坑</h1><p>作者：OliviaLotus（xxx@example.com）</p>
         
           <h3 id="前言">
