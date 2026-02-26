@@ -1,0 +1,51 @@
+name: Deploy Astro to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+# 基础权限配置
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+      
+      - name: Install, build, and upload your site
+        uses: withastro/action@v3
+        with:
+          node-version: 22
+          # 保留 Astro 构建逻辑，产物会自动上传为 artifact
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 赋予写入外部仓库的权限
+    steps:
+      # 下载 Astro 构建好的 artifact
+      - name: Download built artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages # 固定名称，和 withastro/action 输出的 artifact 对应
+          path: ./dist       # 下载到本地 dist 目录
+
+      # 部署到外部的 olivialotus.github.io 仓库
+      - name: Deploy to external GitHub Pages repo
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          # 使用个人令牌（需要有 olivialotus.github.io 仓库的写入权限）
+          personal_token: ${{ secrets.BLOG_SECRETS }}
+          # 指定外部仓库
+          external_repository: olivialotus/olivialotus.github.io
+          # 部署到外部仓库的 main 分支（GitHub Pages 根域名仓库默认用 main 分支）
+          publish_branch: main
+          # Astro 构建产物的目录
+          publish_dir: ./dist
+          # 清除旧文件，避免残留
+          force_orphan: true
