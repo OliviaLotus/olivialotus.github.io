@@ -2,8 +2,8 @@
 title: TypeORM create方法的类型推断问题
 published: 2024-09-02
 description: TypeORM create方法的类型推断问题
-tags: [nodejs, typeorm]
-category: 前端
+tags: [nodejs]
+category: 后端
 ---
 
 ## 问题描述

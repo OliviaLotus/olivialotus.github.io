@@ -2,7 +2,7 @@
 title: Pure-Admin-http工具类解析
 published: 2024-08-19
 description: Pure-Admin-http工具类解析
-tags: [javascript, typescript, vue]
+tags: [typescript, vue]
 category: 前端
 ---
 

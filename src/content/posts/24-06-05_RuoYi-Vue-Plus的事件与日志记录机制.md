@@ -207,5 +207,3 @@ public class EsLogininforListener {
     }
 }
 ```
-
-这种方式使得日志记录逻辑具有极高的灵活性和可扩展性，可以轻松地适应不同的业务需求。

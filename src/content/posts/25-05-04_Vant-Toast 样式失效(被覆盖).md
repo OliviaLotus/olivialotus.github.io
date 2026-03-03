@@ -2,7 +2,7 @@
 title: Vant-Toast 样式失效(被覆盖)
 published: 2025-05-04
 description: Vant-Toast 样式失效(被覆盖)
-tags: [javascript, vue]
+tags: [typescript, vue]
 category: 前端
 ---
 
